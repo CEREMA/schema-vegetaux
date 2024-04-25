@@ -1,1 +1,1854 @@
-{"$schema":"https://specs.frictionlessdata.io/schemas/table-schema.json","name":"vegetaux","title":"Végétaux","description":"Spécification du fichier relatif aux végétaux","keywords":["tree","nature","city","shrub","ecology","biodiversity","climate zones"],"countryCode":"FR","homepage":"https://github.com/CEREMA/schema-vegetaux","path":"https://github.com/CEREMA/schema-vegetaux/raw/vx.x.x/schema.json","image":"https://raw.githubusercontent.com/CEREMA/schema-vegetaux/vx.x.x/files/image.jpg","licenses":[{"title":"Etalab Licence Ouverte 2.0","name":"etalab-2.0","path":"https://spdx.org/licenses/etalab-2.0.html"}],"resources":[{"title":"Exemple valide","name":"exemple-xxx-csv","path":"https://raw.githubusercontent.com/CEREMA/schema-vegetaux/vx.x.x/exemple-xxx-csv.csv"}],"sources":[{"title":"Documentation1","name":"DOC1","path":"https://raw.githubusercontent.com/CEREMA/schema-vegetaux/vx.x.x/files/xxx.pdf"},{"title":"Documentation2","name":"DOC2","path":"https://raw.githubusercontent.com/CEREMA/schema-vegetaux/vx.x.x/files/xxx.pdf"}],"created":"2024-04-09","lastModified":"2024-04-09","version":"vx.x.x","contributors":[{"title":"Mathieu Rajerison","email":"mathieu.rajerison@cerema.fr","organisation":"Cerema","role":"author"},{"title":"Catherine Ducatillion","email":"xxx","organisation":"INRAE Villa Thuret","role":"contributor"},{"title":"Eleonore Oberlé","email":"xxx","organisation":"INRAE Villa Thuret","role":"contributor"},{"title":"Patricia Detry","email":"patricia.detry@cerema.fr","organisation":"Cerema","role":"contributor"},{"title":"Astrid Lanneau","email":"astrid.lanneau@departement13.fr","organisation":"Cerema","role":"contributor"}],"fields":[{"name":"ID","title":"id","description":"Identifiant de l’espèce selon Sesame 13","example":10,"type":"number","constraints":{"required":true}},{"name":"nom_scientifique","title":"Nomenclature binominale","description":"<br>Nom scientifique de l’espèce (en latin)","example":"Jasminum nudiflorum Lindl.","type":"string","constraints":{"required":true}},{"name":"nom_commun","title":"Nom commun","description":"Nom commun (en français) de l’espèce","example":"Érable de Montpellier","type":"string","constraints":{"required":true}},{"name":"famille","title":"Famille","description":"Famille de l’espèce","example":"Betulaceae","type":"string","constraints":{"required":false}},{"name":"accueil_insectes","title":"Capacité d'accueil des insectes","description":"Capacité d’accueil des insetes","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"aire_naturelle","title":"Aire naturelle","description":"Le niveau de précision est le pays, ou la région (selon la taille du pays, la répartition de l'espèce) dans lequel l’espèce se situe de façon naturelle","example":"Maroc, Andalousie","type":"string","constraints":{"required":false}},{"name":"allergisant","title":"Allergène","description":"Oui/Non, et si plus d'informations :<br>Faible ou négligeable – Il faut une très grande quantité de pollen pour déclencher une allergie et cela ne concerne que les personnes les plus sensibles. <br>Modéré <br>Fort - Quelques pollens suffisent à provoquer une réaction allergique<br>","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"anime","title":"Animer","description":"la floraison printanière exubérante de certains arbres et/ou le feuillage lumineux à l’automne permet de qualifier une ambiance, un signal ou un repère spatial.","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"capacite_recepage","title":"Capacité de recépage","description":"Oui/Non et commentaires<br>Arbres feuillus se recèpent mieux. <br>La capacité et vigueur de recépage diminue avec l'âge<br>La plupart des arbustes se recèpent","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"categorie_paysagere","title":"Catégorie paysagère","description":"Arbre : Végétal ligneux atteignant au moins 7m de haut, et développant dès le départ une tige principale forte (tronc) <br>Arbuste : Végétal ligneux ne dépassant pas 7m de haut, et développant dès le départ un tronc, portant les tiges secondaires à une certaine distance du sol.<br>Arbrisseau : Végétal ligneux ne dépassant pas 7m de haut (en général pas plus de 4), et ne développant pas tronc, mais de nombreuses tiges ramifiées dès la base.<br>Sous arbrisseau : Végétal ligneux, sous-frutescent, inférieur à 1m, et dont l’extrémité des rameaux herbacées se dessèche chaque hiver.<br>Herbacée : Végétal tendre, non ligneux - annuelle, bisannuelle ou vivace.","example":"Liane","type":"string","constraints":{"required":false,"enum":["Arbre","Arbuste","Arbrisseau","Sous-arbrisseau","Herbacée","Liane"]}},{"name":"cavites","title":"Capacité à générer des cavités","description":"Capacité à générer des cavités","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"cheminement","title":"Cheminement","description":"Espace linéaire dédiés exclusivement aux modes actifs offrant à la fois confort sécurité et convivialité à ses usagers. Exemples: pistes, sentiers, etc.","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"cimetiere","title":"Cimetière","description":"Espace funéraire et lieu de recueillement de sépultures, il est souvent clos et ouvert au public. Plus ou moins végétalisé, cet espace intègre une symbolique forte (végétale, ornementale, etc.) qui varie en fonction des cultures et des lieux géographiques.","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"comestibles_faune","title":"Éléments comestibles pour l’avifaune et la moyenne faune","description":"Éléments comestibles pour l’avifaune et la moyenne faune","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"commentaire_biodiversite","title":"Commentaire","description":"Commentaire associé aux services rendus à la biodiversité","example":"Visité par de nombreux passereaux, papillons, bourdons. Il est nectarifère","type":"string","constraints":{"required":false}},{"name":"commentaire_consommation","title":"Commentaires","description":"Commentaire associé à la consommation par les humains","example":"En dehors de son utilisation en bouquets secs,ses fleurs ont  des vertus antitussives et diurétiques. En cuisine, les immortelles ne valent pas le vrai curry, un mélange d'épices complexe au parfum plus subtil et tenant beaucoup mieux à la cuisson. En Espagne, les fleurs de l'immortelle des dunes sont toutefois utilisées en infusion et fournissent une tisane improprement appelée « manzanilla », ce qui signifie camomille.","type":"string","constraints":{"required":false}},{"name":"commentaire_origine","title":"Commentaire sur l’origine","description":"Commentaire associé à l’origine de l’espèce","example":null,"type":"string","constraints":{"required":false}},{"name":"commentaire_paysage","title":"Paysage et cadre de vie","description":"Commentaire associé au paysage et au cadre de vie","example":"Arbre au feuillage très décoratif, il est utilisé en alignement dans sa zone de répartition d'origine, mais sera plutôt utilisé comme sujet isolé, bosquet, ou haie haute sous nos latitudes. Il requiert une température d’au moins 5°C avec son port dressé puis étalé avec les années. Esthétique   avec des branches fortes, il est bon pour la faune. Feuilles odorantes","type":"string","constraints":{"required":false}},{"name":"confort","title":"Confort","description":"la qualité d’ombrage de certaines essences apporte une voûte protectrice des rayons de soleil, le végétal peut également être un brise-vent ou/et un écran visuel (pour masquer) ou marque une limite infranchissable (pour protéger).<br>","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"conifere_feuillu","title":"Conifère / feuillu","description":"Classe d'appartenance de l'espèce à l'embranchement des pinophytes (conifères) ou non.<br>0-inconnu : valeur recherchée mais inconnue<br>1-conifère : plante appartenant à l’embranchement des pinophytes. Synonyme : résineux.<br>2-feuillu : plante n’appartenant pas à l’embranchement des pinophytes.","example":"Inconnu","type":"string","constraints":{"required":false,"enum":["Inconnu","Conifère","Feuillu"]}},{"name":"contraintes_physiques","title":"Contraintes physiques","description":"détails dans commentaires<br>♠Valeurs multiples possibles : Epines, Brûlures, Poils urticants, Fruits salissants, Dépôt de miellat, Aucun, Aucune","example":["Dépôt de miellat","Fruits salissants"],"type":"array","constraints":{"required":false},"arrayItem":{"constraints":{"enum":["Epines","Brûlures","Poils urticants","Fruits salissants","Dépôt de miellat","Aucun","Aucune"]}}},{"name":"cortege_naturel","title":"Cortège végétal","description":"Certaines espèces sont associées entre elles dans la nature et il peut être intéressant dans certains cas de reproduire cette association (affinités des végétaux entre eux). Ainsi le cortège végétal proposé est un ensemble d'espèces ayant des caractéristiques écologiques communes.","example":"romarin,ciste, lavande,pistachier lentisque,chêne kermès, génévrier oxycèdre","type":"string","constraints":{"required":false}},{"name":"cour_ecole","title":"Cour d’école","description":"Espace extérieur clos réservé aux établissements scolaire à dominante minérale. Soumis à un règlement, ils peuvent être aménagés avec des structures/équipements sportifs et pédagogiques.","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"danger_mecanique","title":"Danger mécanique","description":"Ex - La plupart des Eucalyptus<br>2 - Ex - chute des cônes d'Araucaria. <br>♠Valeurs multiples possibles : Branches cassantes, Fructification pouvant entraîner des dommages, Chute d'arbre, Aucun, Aucune","example":["Branches cassantes","Fructification pouvant entraîner des dommages"],"type":"array","constraints":{"required":false},"arrayItem":{"constraints":{"enum":["Branches cassantes","Fructification pouvant entraîner des dommages","Chute d'arbre","Aucun","Aucune"]}}},{"name":"envahissante","title":"Envahissante","description":"Espèce envahissante (émergente, modérée, majeure - noter dans commentaires)<br>2 – EVEpotE - Espèce potentiellement envahissante - Alerte - Espèce végétale exotique peu fréquente sur le territoire considéré, elle est citée comme envahissante ailleurs et a un risque de prolifération intermédiaire à élevé <br>3 - EVEpotE - Prévention -  Espèce végétale exotique a priori absente du territoire considéré, citée comme envahissante ailleurs et ayant un risque intermédiaire à élevé de prolifération .<br>4 - L'espèce n'est pas sur la liste de prévention de PACA, mais elle est considérée comme envahissante à l'étranger - considerer le danger potentiel<br>a : Beaucoup de territoires la considèrent comme envahissante - évaluer le danger potentiel<br>b :  Peu (1 à 3 max) de territoires considèrent cette espèce comme enhavissante - la plante n'est pas considérée comme potentiellement invasive. <br>5 - Espèce non envahissante<br>5b - l'Espèce est peu plantée, peu connue","example":"EVEE","type":"string","constraints":{"required":false,"enum":["EVEE","Alerte","Prévention","A-EVEE à l'étranger","B-EVEE à l'étranger","Non"]}},{"name":"espace_intermediaire","title":"Espace intermédiaire","description":"Espace interstitiel non construit formant des intervalles et respirations entre les bâtiments. Il est fréquent dans les quartiers des grands ensembles. Non structurant et parfois non entretenus, ils constituent des « respirations » vé-gétalisées dans le tissu urbain, à l'image des pas japonais dans la ville.","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"feuilles_composition","title":"Composition foliaire","description":"Composition foliaire","example":"Simple","type":"string","constraints":{"required":false,"enum":["Simple","Composée"]}},{"name":"feuilles_densite","title":"Densité du feuillage","description":"Classe de densité du feuillage de l’arbre adulte en condition naturelle isolée. <br>0-inconnu : valeur recherchée mais inconnue<br>1-ouvert : feuillage peu dense, la lumière traverse aisément. Exemple : Saule blanc, Févier d’Amérique<br>2-moyennement dense : feuillage moyennement dense, la lumière traverse difficile. Exemple : Tilleul, Pin sylvestre<br>3-dense : feuillage très dense, la lumière ne traverse quasiment pas. Exemple : Génévrier, Erable de Montpellier","example":"Moyennement dense","type":"string","constraints":{"required":false,"enum":["Inconnu","Ouvert","Moyennement dense","Dense"]}},{"name":"feuilles_forme","title":"Forme des feuilles","description":"Classe de la forme du limbe de la feuille (ou de la foliole/foliolule si feuille composée).<br>0-inconnu : valeur recherchée mais inconnue,<br>1-aiguille : Forme des feuilles très fine et très allongée (beaucoup plus longue que large) (Aiguille, linéaire, aciculaire…)<br>2-lobé : Forme plus longue que large, en partie découpée (Lobée, pennatilobée,  pennatifide, pennatipartite, pennatiséquée…)<br>3-lancéolé ou ovale : Forme plus longue que large, entière (Lancéolé, oblongue, ovale, obovale, elliptique, oblancéolée, sagitée, falciforme…)<br>4-palmilobé : Forme aussi longue que large, en partie découpée (Incisé, acutilobée, pédatilobée, pédatifide, palmilobée, palmatilobée, palmatifide, palmatipartite…)<br>5-ronde : Forme aussi longue que large, entière (Ronde, cordée, réniforme, orbiculaire, luné, lunulée, peltée, deltoïde, cordiforme, en éventail…)<br>6-écaille : Forme particulière en écaille (Feuilles plates et très courte imbriquée les unes dans les autres)","example":"Lancéolé ou ovale","type":"string","constraints":{"required":false,"enum":["Inconnu","Aiguille","Lobée","Lancéolé ou ovale","Palmilobé","Ronde","Écaille"]}},{"name":"feuilles_rugosite","title":"Rugosité","description":"Classe de rugosité du limbe de la feuille (ou de la foliole/foliolule si feuille composée).<br>0-inconnu : valeur recherchée mais inconnue,<br>1-glabre : Feuilles glabres et souples des 2 côtés,<br>2-cireuse : Feuille avec cuticule supérieure épaisse (et glabre face inférieure),<br>3-cireuse sur deux faces : Feuille avec 2 faces cireuses,<br>4-poilue : Feuille avec 1 face poilue  (glabre et souple sur l’autre face),<br>5-poilue sur deux faces : Feuille avec 2 faces poilues ,<br>6-cireuse et poilue :Feuille avec cuticule supérieure épaisse et face inférieure poilue,<br>7-limbe réduit : Forme particulière en aiguille ou écaille","example":"Limbe réduit","type":"string","constraints":{"required":false,"enum":["Inconnu","Glabre","Cireuse","Cireuse sur deux faces","Poilue","Poilue sur deux faces","Cireuse et poilue","Limbe réduit"]}},{"name":"feuilles_taille","title":"Taille des feuilles","description":"Classe de longueur maximale du limbe de la feuille (si feuille simple), de la foliole/foliolule (si feuille composée), de l’aiguille ou de l’écaille de l’arbre adulte en condition naturelle. <br>0-inconnu : valeur recherchée mais inconnue<br>1-petite : de 0 à 5,0cm de long (exemple  Cupressus sempervirens : 0.5-1cm, Cedrus atlantica : 2.5cm)<br>2-moyenne : de 4,9cm à 14,9cm de long (exemple  Crataegus monogyna : 3-5cm, Fraxinus ornus : 5-10cm, Celtis australis : 5-12cm)<br>3-grande : 15cm de long et plus (Prunus persica : 8-15cm, Broussonetia papyrifera : 10-20cm, Platanus orientalis : 15-30cm, Paulownia tomentosa : 17-50cm. )","example":"Moyenne","type":"string","constraints":{"required":false,"enum":["Inconnu","Petite","Moyenne","Grande"]}},{"name":"feuilles_type","title":"Feuillage","description":"Classe de persistance du feuillage en condition naturelle. <br>0-inconnu : valeur recherchée mais inconnue<br>1-caduc : feuilles qui tombent selon un rythme saisonnier. L’arbre n’a plus de feuille pendant une période de l’année. Synonyme : décidue.<br>2-marcescent : feuilles qui flétrissent selon un rythme saisonnier. Elles sèchent sur la plante sans s'en détacher. L’arbre perdra ses feuilles lors du débourrement qui interviendra après une période sans feuille vivante.<br>3-semi-persistant : feuilles qui tombent selon un rythme saisonnier, mais suivie immédiatement de la repousse. Synonyme : brévidécidue.<br>4-persistant : feuilles qui ne tombent pas selon un rythme saisonnier. Le feuillage reste vert et fonctionnel en permanence.","example":"Caduc","type":"string","constraints":{"required":false,"enum":["Inconnu","Caduc","Marcescent","Semi-persistant","Persistant"]}},{"name":"fleurs_couleur","title":"Couleur","description":"Une ou plusieurs couleurs de la floraison<br>Couleur de la floraison = dominante","example":"vert puis pourpre","type":"string","constraints":{"required":false}},{"name":"fleurs_periode","title":"Période","description":"Les mois de floraison :<br>janvier ... 12 - décembre<br>Ex : 3.5 - 5 : de mi mars à mai<br>Hiver : 12.5 – 3.5<br>Printemps : 3.5 – 6.5<br>Eté : 6.5-9.5<br>Automne :9.5 -12.5","example":["5","10"],"type":"array","constraints":{"required":false},"arrayItem":{"constraints":{"enum":["1","2","3","4","5","6","7","8","9","10","11","12"]}}},{"name":"fleurs_valorisation","title":"Valorisation des fleurs","description":"Valorisation des fleurs : esthétique, en parfum ou les deux<br>♠Valeurs multiples possibles : Apparence, Parfum, Les deux, Non","example":["Non","Les deux"],"type":"array","constraints":{"required":false},"arrayItem":{"constraints":{"enum":["Apparence","Parfum","Les deux","Non"]}}},{"name":"fruits_comestibles","title":"Fruit comestible","description":"Le fruit est-il comestible ?","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"fruits_commentaire","title":"Commentaire","description":"Commentaire associé aux fruits","example":"Capsules coriaces, contenant 4 graines","type":"string","constraints":{"required":false}},{"name":"grande_voie","title":"Grande voie de circulation","description":"Espace public linéaire structurant à l'échelle de la ville dédié en priorité à la mobilité et pouvant accueillir de habitat et des commerces. Exemples: boulevard, rambla, avenue, etc.","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"habitats_hote","title":"Capacité à générer des habitats, rôle de plante hôte","description":"Capacité à générer des habitats, rôle de plante hôte","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"hauteur_max","title":"Hauteur maximale","description":"Hauteur maximale atteinte par l’arbre adulte, en condition naturelle, en mètres, arrondi à l’entier le plus proche.","example":10,"type":"number","constraints":{"required":false}},{"name":"indigene_exogene","title":"Caractère Indigène/Exogène","description":"SUPPRIMER","example":"Invasive avérée","type":"string","constraints":{"required":false,"enum":["Espèce autochtone","Espèce allochtone","Exotique à surveiller","Invasive potentielle","Invasive avérée"]}},{"name":"inflammabilite","title":"Inflammabilité","description":"Niveau d’inflammabilité","example":"Moyen","type":"string","constraints":{"required":false,"enum":["Faible","Moyen","Fort","Très fort"]}},{"name":"infusion","title":"Utilisable en infusion","description":"Le végétal est-il utilisable en infusion ?","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"insectes","title":"Insectes observés","description":"Nom des insectes, famille","example":"papillons nectar et hôte","type":"string","constraints":{"required":false}},{"name":"interet_lepidopteres","title":"Intérêt pour les Lépidoptères","description":"Intérêt pour les Lépidoptères","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"largeur_houppier","title":"Largeur","description":"Classe de largeur maximale (diamètre) atteinte par le houppier adulte, en condition naturelle.<br>0-inconnu : valeur recherchée mais inconnue<br>1-étroit : de 0 à 3,9m de large<br>2-moyen : de 4,0m à 7,9m de large<br>3-large : de 8,0m à 19,9m de large<br>4-très large : 20,0m de large et plus","example":"Très large","type":"string","constraints":{"required":false,"enum":["Inconnu","Étroit","Moyen","Large","Très large"]}},{"name":"longevite","title":"Longévité","description":"Critère qualitatif - les chiffres sont un guide pour les arbres.<br>Courte : 0-25 <br>Moyenne : 25 - 75<br>Longue – 75 : 150<br>Très longue : 150+<br>Record : 500+","example":"Moyenne","type":"string","constraints":{"required":false,"enum":["Courte","Moyenne","Longue","Très longue","Record"]}},{"name":"mer_etang","title":"Bord de mer et étang","description":"Espace public  aménagé sous la forme de promenades plantées le long des espaces maritimes et lacustres. Soumis aux embruns et aux vents, seule une gamme végétale spécifique s’adapte dans ces situations.","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"noue_bassin_orage","title":"Noue et bassin d’orage","description":"Lieu de déambulation, de séjour, de loisirs qui participe à la gestion écologique de l’eau pluviale sous différentes formes où la diversité des ambiances et le confort sont recherchés. Exemples: bassins et fossés plantés, jardins de pluie, prairie urbaine et plaine de jeux inondable.","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"origine","title":"Type d'origine","description":"Indigènes : Taxons dont l’aire naturelle de répartition se superpose, au moins en partie, au territoire considéré.<br>Cryptogènes : Taxons dont l’aire de répartition naturelle et leur origine éventuelle avant une possible expansion liée à l’homme ne peuvent être définies en raison d’un manque d’informations<br>Exogènes : Taxons dont l’aire naturelle de répartition ne se superpose pas au territoire considéré ( dont archéophytes et néophytes)","example":"Cryptogène","type":"string","constraints":{"required":false,"enum":["Indigène","Cryptogène","Exogène"]}},{"name":"parc_urbain","title":"Parc urbain","description":"Vaste espace public végétalisé structurant à l'échelle de la ville. Cet aménagement, généralement clos, propose une large diversité végétale et offre de nombreuses aménités aux habitants","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"partie_toxique","title":"Partie toxique  ","description":"4 - La sève est phototoxique (autres types de toxicité?)<br>5 - Fleurs<br>6-Ecorce,<br>7-Racines<br>♠Valeurs multiples possibles : Fruits, Graines, Feuilles, Sève, Fleurs, Ecorce, Racines, Aucun, Aucune","example":["Feuilles","Graines"],"type":"array","constraints":{"required":false},"arrayItem":{"constraints":{"enum":["Fruits","Graines","Feuilles","Sève","Fleurs","Ecorce","Racines","Aucun","Aucune"]}}},{"name":"place","title":"Place","description":"Espace public structurant à l'échelle de la ville ou du quartier pouvant accueillir de multiples usages<br>Un espace de circulation, d’interaction et lieu de promenade. Ce lieu attractif est propice aux rendez-vous, aux petits et grands rassemblements.  La place est une scène idéale de représentation collective, sociale et urbaine à haute valeur patrimoniale.","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"placette","title":"Placette","description":"Petite place publique d’un quartier de ville ou de village offrant un lieu central aspirant à la convivialité, au confort et à l'identité locale, valorisant le patrimoine auquel il est parfois visuellement associé.","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"pollen_nectar","title":"Capacité à générer des pollens et nectars","description":"Capacité à générer des pollens et nectars","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"port","title":"Forme","description":"Forme, port, silhouette de l’arbre adulte, en condition naturelle isolée.<br>valeurs possibles : <br>1-colonnaire (Colonnaire, Fastigié, Stipe, Conique étroit…), <br>2-pyramidal (Pyramidal, Conique, Conique large),<br>3-arrondi (Arrondi, Ovale, Boule, Globuleux, Sphérique, Ovoïde),<br>4-étalé (Etalé, Rampant, Tabulaire, Verticillé, Etalé bas, Parasol),<br>5-pleureur (Pleureur),<br>6-buissonnant (Buissonnant),<br>7-liane (Liane, Grimpant)","example":"Colonnaire","type":"string","constraints":{"required":false,"enum":["Inconnu","Colonnaire","Pyramidal","Arrondi","Étalé","Pleureur","Buissonnant","Liane"]}},{"name":"quai_berge","title":"Quai et berge","description":"Voie publique aménagée en bordure de cours d'eau aux aménagements naturalisés (berge) ou minéralisés (quai). Voués à l'accostage et prioritairement à la déambulation et à la circulation des modes actifs, elle offre sécurité et confort d'usages.<br>","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"racines_degats","title":"Dégâts","description":"La plante fait des drageons, ou des rejets de souche.<br>La plante a besoin d'un grand volume de sol et le système racinaire peut soulever le trottoir, endommager les structures souterraines. ","example":"Racines agressives","type":"string","constraints":{"required":false,"enum":["Racines agressives","Drageonnantes","Aucun"]}},{"name":"racines_systeme","title":"Systèmes racinaires","description":"1 – Système racinaire pivotant : Une racine verticale prépondérante (pivot), développement de longs pivots secondaires et de racines horizontales <br>2 – Système racinaire traçant : un pivot qui avorte rapidement, laissant la place à des racines horizontales et de courts pivots verticaux. La surface prospectée est étendue mais peu profonde.<br>3 – Système en cœur : Caractérisé par un mélange de racines horizontales, obliques et verticales – racines moins étalées et superficielles<br>4 - Système mixte : mélange de pivotant et traçant (peu de racines obliques)","example":"Cœur","type":"string","constraints":{"required":false,"enum":["Pivotant","Traçant","Cœur","Mixte"]}},{"name":"recommandations_guides","title":"Recommandations par des guides locaux en terme de biodiversité","description":"Recommandations par des guides locaux en terme de biodiversité","example":"Espèce non citée","type":"string","constraints":{"required":false,"enum":["Espèce citée dans plusieurs guides","Espèce citée dans un guide","Espèce non citée"]}},{"name":"resistance_chaleur","title":"Chaleur","description":"Voire hyperthermophile : développement optimal en milieu chaud – plus de 30° <br>Mésothermophile : Les plantes ne subiront pas ou peu de dommages pendant des vagues de chaleur importantes<br>Résistante : La plante peut survivre à des vagues de chaleurs, si elles ne sont pas trop intenses, ou trop longues<br>Intolérante : La plante ne tolère pas les fortes chaleurs<br>","example":"Thermophile","type":"string","constraints":{"required":false,"enum":["Thermophile","Mésothermophile","Résistante","Intolérante"]}},{"name":"resistance_gel","title":"Résistance au gel","description":"Résistance au gel faible/moy/forte<br>Faible : 0<br>Moyenne : - 5/-10<br>Forte : - 15<br>(trsè forte : -25 et +)","example":"Moyenne","type":"string","constraints":{"required":false,"enum":["Faible","Moyenne","Forte","Très forte"]}},{"name":"resistance_secheresse","title":"Sécheresse","description":"1 – Xérophyte : Plante capable de vivre dans des régions habituellement sèches (déserts) ou dans des milieux physiologiquement secs (sols salés). Possède des adaptations morphologiques /physiologiques à la sécheresse. <br>2 – Mésoxérophyte : Se développe bien dans les millieux secs, mais ne supporte pas une sécheresse extrême. <br>3 - Peut résister à une sécheresse - si elle n'est pas trop longue ou <br> 4 – Mésophyte : Se développe le mieux dans des conditions d’humidité intermédiaire. Ne résiste pas très bien à la sécheresse. Elles peuvent avoir quelques adaptations à la sécheresse ou à la sur-humidité.  <br>5 – Hygrocline : Préfère un milieu assez humide. Ne supporte pas la sécheresse.","example":"Hygrocline","type":"string","constraints":{"required":false,"enum":["Xérophyte","Mésoxérophyte","Résistant","Mésophyte","Hygrocline"]}},{"name":"resistance_vent","title":"Vents","description":"Les plantes adaptées au vent ont des branches solides, et un système racinaire développé qui leur permet de résister au chablis (déracinement).","example":"Intolérant","type":"string","constraints":{"required":false,"enum":["Adapté","Tolérant","Intolérant"]}},{"name":"sol_salinite","title":"Salinité","description":"1 Euhalophyte : Ne pousse que dans des environnements salés – OU – haute tolérance au sel, avec un effet favorable du sel sur la plante (croissance et productivité) <br>2 : Tolère bien le sel– stratégies - excrétion, compartimentalisation, réduction de l’influx de sodium <br>3 : Tolérance plus faible au sel-  Ces plantes réussissent à minimiser le transport des ions de sodium vers les parties aériennes (3a - très tolérante, 3b assez tolérante)<br>4 : Intolérance au sel - Effet négatifs, (ralentissement de la croissance, voire mort) ","example":"Halophyte facultative","type":"string","constraints":{"required":false,"enum":["Euhalophyte","Halophyte facultative","Glycophyte tolérante","Glycophyte intolérante"]}},{"name":"sol_texture","title":"Besoins de texture","description":"Sableux : draine très bien, peu fertile, beaucoup d’érosion, chauffe rapidement<br>2 – Limoneux : fertile, retient moyennement l’eau, se compacte facilement, moins de 10% d’argile <br>3 – Argileux : fertile, retient bien l’eau, plus de 10% d’argile.<br>4 -Humifère : foncé – sol riche en matière organique – fertile – retient bien l’eau en étant pas trop compact - acide<br>♠Valeurs multiples possibles : Sable, Limon, Argile, Humus, Gravier/roches","example":["Sable","Limon"],"type":"array","constraints":{"required":false},"arrayItem":{"constraints":{"enum":["Sable","Limon","Argile","Humus","Gravier/roches"]}}},{"name":"square","title":"Square","description":"Jardin public de proximité, généralement clos en cœur de quartier offrant une ambiance rassurante et calme propice au séjour, à la détente et aux jeux.","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"stationnement","title":"Stationnement","description":"Espaces spécifiquement aménagés pour le stationnement des véhicules en secteur urbain et péri urbain, sur des places ou le long des voies","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"structure","title":"Structurer","description":"Un alignement qui cadre un point de vue vers un monument mais aussi le port architecturé des<br>arbres, le dessin des branches charpentières… le végétal permet de souligner des limites, des lignes<br>directrices.<br>","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"symbolique","title":"Symbolique","description":"le prestige et le rôle symbolique des plantations permet de jouer/de faire écho avec le patrimoine architectural. Le végétal peut également conforter une identité locale en lien avec l’histoire du lieu ou évoquer un lieu particulier ou sacré.<br>","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"toxique","title":"Toxicité","description":"Oui (majeure ou mineure)<br>Non","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]},{"name":"vitesse_croissance","title":"Vitesse de croissance","description":"Critère qualitatif - fourchette pour vérifier : <br>1 : 60+cm ans<br>2 : 30/60, <br>3- : de 30 par an. <br>Catégories intermédiaires si incertitude -  moyenne/rapide, lente/moyenne","example":"Moyenne","type":"string","constraints":{"required":false,"enum":["Rapide","Moyenne","Lente"]}},{"name":"voie_peripherique","title":"Voie périphérique","description":"Espace public linéaire assurant le lien entre la ville centre et sa périphérie. Il est une transition entre des secteurs urbanisés et péri-urbanisés voire des espaces ruraux. Il constitue une entrée de ville et/ou dessert des zones d'ha-bitation et d'activités économiques. Exemples: bas-côtés et dépendances routières de ZAC, etc.","type":"boolean","constraints":{"required":false},"trueValues":["oui","Oui","OUI","o","O","vrai","Vrai","VRAI","true","True","TRUE","1"],"falseValues":["non","Non","NON","n","N","faux","Faux","FAUX","false","False","FALSE","0"]}],"missingValues":["","NA","NaN","N/A"],"primaryKey":"ID"}
+{
+    "$schema": "https://specs.frictionlessdata.io/schemas/table-schema.json",
+    "name": "vegetaux",
+    "title": "Végétaux",
+    "description": "Spécification du fichier relatif aux végétaux",
+    "keywords": [
+        "tree",
+        "nature",
+        "city",
+        "shrub",
+        "ecology",
+        "biodiversity",
+        "climate zones"
+    ],
+    "countryCode": "FR",
+    "homepage": "https://github.com/CEREMA/schema-vegetaux",
+    "path": "https://github.com/CEREMA/schema-vegetaux/raw/vx.x.x/schema.json",
+    "image": "https://raw.githubusercontent.com/CEREMA/schema-vegetaux/vx.x.x/files/image.jpg",
+    "licenses": [
+        {
+            "title": "Etalab Licence Ouverte 2.0",
+            "name": "etalab-2.0",
+            "path": "https://spdx.org/licenses/etalab-2.0.html"
+        }
+    ],
+    "resources": [
+        {
+            "title": "Exemple valide",
+            "name": "exemple-xxx-csv",
+            "path": "https://raw.githubusercontent.com/CEREMA/schema-vegetaux/vx.x.x/exemple-xxx-csv.csv"
+        }
+    ],
+    "sources": [
+        {
+            "title": "Documentation1",
+            "name": "DOC1",
+            "path": "https://raw.githubusercontent.com/CEREMA/schema-vegetaux/vx.x.x/files/xxx.pdf"
+        },
+        {
+            "title": "Documentation2",
+            "name": "DOC2",
+            "path": "https://raw.githubusercontent.com/CEREMA/schema-vegetaux/vx.x.x/files/xxx.pdf"
+        }
+    ],
+    "created": "2024-04-09",
+    "lastModified": "2024-04-09",
+    "version": "vx.x.x",
+    "contributors": [
+        {
+            "title": "Mathieu Rajerison",
+            "email": "mathieu.rajerison@cerema.fr",
+            "organisation": "Cerema",
+            "role": "author"
+        },
+        {
+            "title": "Catherine Ducatillion",
+            "email": "xxx",
+            "organisation": "INRAE Villa Thuret",
+            "role": "contributor"
+        },
+        {
+            "title": "Eleonore Oberlé",
+            "email": "xxx",
+            "organisation": "INRAE Villa Thuret",
+            "role": "contributor"
+        },
+        {
+            "title": "Patricia Detry",
+            "email": "patricia.detry@cerema.fr",
+            "organisation": "Cerema",
+            "role": "contributor"
+        },
+        {
+            "title": "Astrid Lanneau",
+            "email": "astrid.lanneau@departement13.fr",
+            "organisation": "Cerema",
+            "role": "contributor"
+        }
+    ],
+    "fields": [
+        {
+            "name": "ID",
+            "title": "id",
+            "description": "Identifiant de l’espèce selon Sesame 13",
+            "example": 10,
+            "type": "number",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "nom_scientifique",
+            "title": "Nomenclature binominale",
+            "description": "<br>Nom scientifique de l’espèce (en latin)",
+            "example": "Jasminum nudiflorum Lindl.",
+            "type": "string",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "nom_commun",
+            "title": "Nom commun",
+            "description": "Nom commun (en français) de l’espèce",
+            "example": "Érable de Montpellier",
+            "type": "string",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "famille",
+            "title": "Famille",
+            "description": "Famille de l’espèce",
+            "example": "Betulaceae",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "accueil_insectes",
+            "title": "Capacité d'accueil des insectes",
+            "description": "Capacité d’accueil des insetes",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "aire_naturelle",
+            "title": "Aire naturelle",
+            "description": "Le niveau de précision est le pays, ou la région (selon la taille du pays, la répartition de l'espèce) dans lequel l’espèce se situe de façon naturelle",
+            "example": "Maroc, Andalousie",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "allergisant",
+            "title": "Allergène",
+            "description": "Oui/Non, et si plus d'informations :<br>Faible ou négligeable – Il faut une très grande quantité de pollen pour déclencher une allergie et cela ne concerne que les personnes les plus sensibles. <br>Modéré <br>Fort - Quelques pollens suffisent à provoquer une réaction allergique<br>",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "anime",
+            "title": "Animer",
+            "description": "la floraison printanière exubérante de certains arbres et/ou le feuillage lumineux à l’automne permet de qualifier une ambiance, un signal ou un repère spatial.",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "capacite_recepage",
+            "title": "Capacité de recépage",
+            "description": "Oui/Non et commentaires<br>Arbres feuillus se recèpent mieux. <br>La capacité et vigueur de recépage diminue avec l'âge<br>La plupart des arbustes se recèpent",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "categorie_paysagere",
+            "title": "Catégorie paysagère",
+            "description": "Arbre : Végétal ligneux atteignant au moins 7m de haut, et développant dès le départ une tige principale forte (tronc) <br>Arbuste : Végétal ligneux ne dépassant pas 7m de haut, et développant dès le départ un tronc, portant les tiges secondaires à une certaine distance du sol.<br>Arbrisseau : Végétal ligneux ne dépassant pas 7m de haut (en général pas plus de 4), et ne développant pas tronc, mais de nombreuses tiges ramifiées dès la base.<br>Sous arbrisseau : Végétal ligneux, sous-frutescent, inférieur à 1m, et dont l’extrémité des rameaux herbacées se dessèche chaque hiver.<br>Herbacée : Végétal tendre, non ligneux - annuelle, bisannuelle ou vivace.",
+            "example": "Liane",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Arbre",
+                    "Arbuste",
+                    "Arbrisseau",
+                    "Sous-arbrisseau",
+                    "Herbacée",
+                    "Liane"
+                ]
+            }
+        },
+        {
+            "name": "cavites",
+            "title": "Capacité à générer des cavités",
+            "description": "Capacité à générer des cavités",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "cheminement",
+            "title": "Cheminement",
+            "description": "Espace linéaire dédiés exclusivement aux modes actifs offrant à la fois confort sécurité et convivialité à ses usagers. Exemples: pistes, sentiers, etc.",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "cimetiere",
+            "title": "Cimetière",
+            "description": "Espace funéraire et lieu de recueillement de sépultures, il est souvent clos et ouvert au public. Plus ou moins végétalisé, cet espace intègre une symbolique forte (végétale, ornementale, etc.) qui varie en fonction des cultures et des lieux géographiques.",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "comestibles_faune",
+            "title": "Éléments comestibles pour l’avifaune et la moyenne faune",
+            "description": "Éléments comestibles pour l’avifaune et la moyenne faune",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "commentaire_biodiversite",
+            "title": "Commentaire",
+            "description": "Commentaire associé aux services rendus à la biodiversité",
+            "example": "Visité par de nombreux passereaux, papillons, bourdons. Il est nectarifère",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "commentaire_consommation",
+            "title": "Commentaires",
+            "description": "Commentaire associé à la consommation par les humains",
+            "example": "En dehors de son utilisation en bouquets secs,ses fleurs ont  des vertus antitussives et diurétiques. En cuisine, les immortelles ne valent pas le vrai curry, un mélange d'épices complexe au parfum plus subtil et tenant beaucoup mieux à la cuisson. En Espagne, les fleurs de l'immortelle des dunes sont toutefois utilisées en infusion et fournissent une tisane improprement appelée « manzanilla », ce qui signifie camomille.",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "commentaire_origine",
+            "title": "Commentaire sur l’origine",
+            "description": "Commentaire associé à l’origine de l’espèce",
+            "example": null,
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "commentaire_paysage",
+            "title": "Paysage et cadre de vie",
+            "description": "Commentaire associé au paysage et au cadre de vie",
+            "example": "Arbre au feuillage très décoratif, il est utilisé en alignement dans sa zone de répartition d'origine, mais sera plutôt utilisé comme sujet isolé, bosquet, ou haie haute sous nos latitudes. Il requiert une température d’au moins 5°C avec son port dressé puis étalé avec les années. Esthétique   avec des branches fortes, il est bon pour la faune. Feuilles odorantes",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "confort",
+            "title": "Confort",
+            "description": "la qualité d’ombrage de certaines essences apporte une voûte protectrice des rayons de soleil, le végétal peut également être un brise-vent ou/et un écran visuel (pour masquer) ou marque une limite infranchissable (pour protéger).<br>",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "conifere_feuillu",
+            "title": "Conifère / feuillu",
+            "description": "Classe d'appartenance de l'espèce à l'embranchement des pinophytes (conifères) ou non.<br>0-inconnu : valeur recherchée mais inconnue<br>1-conifère : plante appartenant à l’embranchement des pinophytes. Synonyme : résineux.<br>2-feuillu : plante n’appartenant pas à l’embranchement des pinophytes.",
+            "example": "Inconnu",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Inconnu",
+                    "Conifère",
+                    "Feuillu"
+                ]
+            }
+        },
+        {
+            "name": "contraintes_physiques",
+            "title": "Contraintes physiques",
+            "description": "détails dans commentaires<br>♠Valeurs multiples possibles : Epines, Brûlures, Poils urticants, Fruits salissants, Dépôt de miellat, Aucun, Aucune",
+            "example": [
+                "Dépôt de miellat",
+                "Fruits salissants"
+            ],
+            "type": "array",
+            "constraints": {
+                "required": false
+            },
+            "arrayItem": {
+                "constraints": {
+                    "enum": [
+                        "Epines",
+                        "Brûlures",
+                        "Poils urticants",
+                        "Fruits salissants",
+                        "Dépôt de miellat",
+                        "Aucun",
+                        "Aucune"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "cortege_naturel",
+            "title": "Cortège végétal",
+            "description": "Certaines espèces sont associées entre elles dans la nature et il peut être intéressant dans certains cas de reproduire cette association (affinités des végétaux entre eux). Ainsi le cortège végétal proposé est un ensemble d'espèces ayant des caractéristiques écologiques communes.",
+            "example": "romarin,ciste, lavande,pistachier lentisque,chêne kermès, génévrier oxycèdre",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "cour_ecole",
+            "title": "Cour d’école",
+            "description": "Espace extérieur clos réservé aux établissements scolaire à dominante minérale. Soumis à un règlement, ils peuvent être aménagés avec des structures/équipements sportifs et pédagogiques.",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "danger_mecanique",
+            "title": "Danger mécanique",
+            "description": "Ex - La plupart des Eucalyptus<br>2 - Ex - chute des cônes d'Araucaria. <br>♠Valeurs multiples possibles : Branches cassantes, Fructification pouvant entraîner des dommages, Chute d'arbre, Aucun, Aucune",
+            "example": [
+                "Branches cassantes",
+                "Fructification pouvant entraîner des dommages"
+            ],
+            "type": "array",
+            "constraints": {
+                "required": false
+            },
+            "arrayItem": {
+                "constraints": {
+                    "enum": [
+                        "Branches cassantes",
+                        "Fructification pouvant entraîner des dommages",
+                        "Chute d'arbre",
+                        "Aucun",
+                        "Aucune"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "envahissante",
+            "title": "Envahissante",
+            "description": "Espèce envahissante (émergente, modérée, majeure - noter dans commentaires)<br>2 – EVEpotE - Espèce potentiellement envahissante - Alerte - Espèce végétale exotique peu fréquente sur le territoire considéré, elle est citée comme envahissante ailleurs et a un risque de prolifération intermédiaire à élevé <br>3 - EVEpotE - Prévention -  Espèce végétale exotique a priori absente du territoire considéré, citée comme envahissante ailleurs et ayant un risque intermédiaire à élevé de prolifération .<br>4 - L'espèce n'est pas sur la liste de prévention de PACA, mais elle est considérée comme envahissante à l'étranger - considerer le danger potentiel<br>a : Beaucoup de territoires la considèrent comme envahissante - évaluer le danger potentiel<br>b :  Peu (1 à 3 max) de territoires considèrent cette espèce comme enhavissante - la plante n'est pas considérée comme potentiellement invasive. <br>5 - Espèce non envahissante<br>5b - l'Espèce est peu plantée, peu connue",
+            "example": "EVEE",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "EVEE",
+                    "Alerte",
+                    "Prévention",
+                    "A-EVEE à l'étranger",
+                    "B-EVEE à l'étranger",
+                    "Non"
+                ]
+            }
+        },
+        {
+            "name": "espace_intermediaire",
+            "title": "Espace intermédiaire",
+            "description": "Espace interstitiel non construit formant des intervalles et respirations entre les bâtiments. Il est fréquent dans les quartiers des grands ensembles. Non structurant et parfois non entretenus, ils constituent des « respirations » vé-gétalisées dans le tissu urbain, à l'image des pas japonais dans la ville.",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "feuilles_composition",
+            "title": "Composition foliaire",
+            "description": "Composition foliaire",
+            "example": "Simple",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Simple",
+                    "Composée"
+                ]
+            }
+        },
+        {
+            "name": "feuilles_densite",
+            "title": "Densité du feuillage",
+            "description": "Classe de densité du feuillage de l’arbre adulte en condition naturelle isolée. <br>0-inconnu : valeur recherchée mais inconnue<br>1-ouvert : feuillage peu dense, la lumière traverse aisément. Exemple : Saule blanc, Févier d’Amérique<br>2-moyennement dense : feuillage moyennement dense, la lumière traverse difficile. Exemple : Tilleul, Pin sylvestre<br>3-dense : feuillage très dense, la lumière ne traverse quasiment pas. Exemple : Génévrier, Erable de Montpellier",
+            "example": "Moyennement dense",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Inconnu",
+                    "Ouvert",
+                    "Moyennement dense",
+                    "Dense"
+                ]
+            }
+        },
+        {
+            "name": "feuilles_forme",
+            "title": "Forme des feuilles",
+            "description": "Classe de la forme du limbe de la feuille (ou de la foliole/foliolule si feuille composée).<br>0-inconnu : valeur recherchée mais inconnue,<br>1-aiguille : Forme des feuilles très fine et très allongée (beaucoup plus longue que large) (Aiguille, linéaire, aciculaire…)<br>2-lobé : Forme plus longue que large, en partie découpée (Lobée, pennatilobée,  pennatifide, pennatipartite, pennatiséquée…)<br>3-lancéolé ou ovale : Forme plus longue que large, entière (Lancéolé, oblongue, ovale, obovale, elliptique, oblancéolée, sagitée, falciforme…)<br>4-palmilobé : Forme aussi longue que large, en partie découpée (Incisé, acutilobée, pédatilobée, pédatifide, palmilobée, palmatilobée, palmatifide, palmatipartite…)<br>5-ronde : Forme aussi longue que large, entière (Ronde, cordée, réniforme, orbiculaire, luné, lunulée, peltée, deltoïde, cordiforme, en éventail…)<br>6-écaille : Forme particulière en écaille (Feuilles plates et très courte imbriquée les unes dans les autres)",
+            "example": "Lancéolé ou ovale",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Inconnu",
+                    "Aiguille",
+                    "Lobée",
+                    "Lancéolé ou ovale",
+                    "Palmilobé",
+                    "Ronde",
+                    "Écaille"
+                ]
+            }
+        },
+        {
+            "name": "feuilles_rugosite",
+            "title": "Rugosité",
+            "description": "Classe de rugosité du limbe de la feuille (ou de la foliole/foliolule si feuille composée).<br>0-inconnu : valeur recherchée mais inconnue,<br>1-glabre : Feuilles glabres et souples des 2 côtés,<br>2-cireuse : Feuille avec cuticule supérieure épaisse (et glabre face inférieure),<br>3-cireuse sur deux faces : Feuille avec 2 faces cireuses,<br>4-poilue : Feuille avec 1 face poilue  (glabre et souple sur l’autre face),<br>5-poilue sur deux faces : Feuille avec 2 faces poilues ,<br>6-cireuse et poilue :Feuille avec cuticule supérieure épaisse et face inférieure poilue,<br>7-limbe réduit : Forme particulière en aiguille ou écaille",
+            "example": "Limbe réduit",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Inconnu",
+                    "Glabre",
+                    "Cireuse",
+                    "Cireuse sur deux faces",
+                    "Poilue",
+                    "Poilue sur deux faces",
+                    "Cireuse et poilue",
+                    "Limbe réduit"
+                ]
+            }
+        },
+        {
+            "name": "feuilles_taille",
+            "title": "Taille des feuilles",
+            "description": "Classe de longueur maximale du limbe de la feuille (si feuille simple), de la foliole/foliolule (si feuille composée), de l’aiguille ou de l’écaille de l’arbre adulte en condition naturelle. <br>0-inconnu : valeur recherchée mais inconnue<br>1-petite : de 0 à 5,0cm de long (exemple  Cupressus sempervirens : 0.5-1cm, Cedrus atlantica : 2.5cm)<br>2-moyenne : de 4,9cm à 14,9cm de long (exemple  Crataegus monogyna : 3-5cm, Fraxinus ornus : 5-10cm, Celtis australis : 5-12cm)<br>3-grande : 15cm de long et plus (Prunus persica : 8-15cm, Broussonetia papyrifera : 10-20cm, Platanus orientalis : 15-30cm, Paulownia tomentosa : 17-50cm. )",
+            "example": "Moyenne",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Inconnu",
+                    "Petite",
+                    "Moyenne",
+                    "Grande"
+                ]
+            }
+        },
+        {
+            "name": "feuilles_type",
+            "title": "Feuillage",
+            "description": "Classe de persistance du feuillage en condition naturelle. <br>0-inconnu : valeur recherchée mais inconnue<br>1-caduc : feuilles qui tombent selon un rythme saisonnier. L’arbre n’a plus de feuille pendant une période de l’année. Synonyme : décidue.<br>2-marcescent : feuilles qui flétrissent selon un rythme saisonnier. Elles sèchent sur la plante sans s'en détacher. L’arbre perdra ses feuilles lors du débourrement qui interviendra après une période sans feuille vivante.<br>3-semi-persistant : feuilles qui tombent selon un rythme saisonnier, mais suivie immédiatement de la repousse. Synonyme : brévidécidue.<br>4-persistant : feuilles qui ne tombent pas selon un rythme saisonnier. Le feuillage reste vert et fonctionnel en permanence.",
+            "example": "Caduc",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Inconnu",
+                    "Caduc",
+                    "Marcescent",
+                    "Semi-persistant",
+                    "Persistant"
+                ]
+            }
+        },
+        {
+            "name": "fleurs_couleur",
+            "title": "Couleur",
+            "description": "Une ou plusieurs couleurs de la floraison<br>Couleur de la floraison = dominante",
+            "example": "vert puis pourpre",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "fleurs_periode",
+            "title": "Période",
+            "description": "Les mois de floraison :<br>janvier ... 12 - décembre<br>Ex : 3.5 - 5 : de mi mars à mai<br>Hiver : 12.5 – 3.5<br>Printemps : 3.5 – 6.5<br>Eté : 6.5-9.5<br>Automne :9.5 -12.5",
+            "example": [
+                "5",
+                "10"
+            ],
+            "type": "array",
+            "constraints": {
+                "required": false
+            },
+            "arrayItem": {
+                "constraints": {
+                    "enum": [
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9",
+                        "10",
+                        "11",
+                        "12"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "fleurs_valorisation",
+            "title": "Valorisation des fleurs",
+            "description": "Valorisation des fleurs : esthétique, en parfum ou les deux<br>♠Valeurs multiples possibles : Apparence, Parfum, Les deux, Non",
+            "example": [
+                "Non",
+                "Les deux"
+            ],
+            "type": "array",
+            "constraints": {
+                "required": false
+            },
+            "arrayItem": {
+                "constraints": {
+                    "enum": [
+                        "Apparence",
+                        "Parfum",
+                        "Les deux",
+                        "Non"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "fruits_comestibles",
+            "title": "Fruit comestible",
+            "description": "Le fruit est-il comestible ?",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "fruits_commentaire",
+            "title": "Commentaire",
+            "description": "Commentaire associé aux fruits",
+            "example": "Capsules coriaces, contenant 4 graines",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "grande_voie",
+            "title": "Grande voie de circulation",
+            "description": "Espace public linéaire structurant à l'échelle de la ville dédié en priorité à la mobilité et pouvant accueillir de habitat et des commerces. Exemples: boulevard, rambla, avenue, etc.",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "habitats_hote",
+            "title": "Capacité à générer des habitats, rôle de plante hôte",
+            "description": "Capacité à générer des habitats, rôle de plante hôte",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "hauteur_max",
+            "title": "Hauteur maximale",
+            "description": "Hauteur maximale atteinte par l’arbre adulte, en condition naturelle, en mètres, arrondi à l’entier le plus proche.",
+            "example": 10,
+            "type": "number",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "indigene_exogene",
+            "title": "Caractère Indigène/Exogène",
+            "description": "SUPPRIMER",
+            "example": "Invasive avérée",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Espèce autochtone",
+                    "Espèce allochtone",
+                    "Exotique à surveiller",
+                    "Invasive potentielle",
+                    "Invasive avérée"
+                ]
+            }
+        },
+        {
+            "name": "inflammabilite",
+            "title": "Inflammabilité",
+            "description": "Niveau d’inflammabilité",
+            "example": "Moyen",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Faible",
+                    "Moyen",
+                    "Fort",
+                    "Très fort"
+                ]
+            }
+        },
+        {
+            "name": "infusion",
+            "title": "Utilisable en infusion",
+            "description": "Le végétal est-il utilisable en infusion ?",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "insectes",
+            "title": "Insectes observés",
+            "description": "Nom des insectes, famille",
+            "example": "papillons nectar et hôte",
+            "type": "string",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "name": "interet_lepidopteres",
+            "title": "Intérêt pour les Lépidoptères",
+            "description": "Intérêt pour les Lépidoptères",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "largeur_houppier",
+            "title": "Largeur",
+            "description": "Classe de largeur maximale (diamètre) atteinte par le houppier adulte, en condition naturelle.<br>0-inconnu : valeur recherchée mais inconnue<br>1-étroit : de 0 à 3,9m de large<br>2-moyen : de 4,0m à 7,9m de large<br>3-large : de 8,0m à 19,9m de large<br>4-très large : 20,0m de large et plus",
+            "example": "Très large",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Inconnu",
+                    "Étroit",
+                    "Moyen",
+                    "Large",
+                    "Très large"
+                ]
+            }
+        },
+        {
+            "name": "longevite",
+            "title": "Longévité",
+            "description": "Critère qualitatif - les chiffres sont un guide pour les arbres.<br>Courte : 0-25 <br>Moyenne : 25 - 75<br>Longue – 75 : 150<br>Très longue : 150+<br>Record : 500+",
+            "example": "Moyenne",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Courte",
+                    "Moyenne",
+                    "Longue",
+                    "Très longue",
+                    "Record"
+                ]
+            }
+        },
+        {
+            "name": "mer_etang",
+            "title": "Bord de mer et étang",
+            "description": "Espace public  aménagé sous la forme de promenades plantées le long des espaces maritimes et lacustres. Soumis aux embruns et aux vents, seule une gamme végétale spécifique s’adapte dans ces situations.",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "noue_bassin_orage",
+            "title": "Noue et bassin d’orage",
+            "description": "Lieu de déambulation, de séjour, de loisirs qui participe à la gestion écologique de l’eau pluviale sous différentes formes où la diversité des ambiances et le confort sont recherchés. Exemples: bassins et fossés plantés, jardins de pluie, prairie urbaine et plaine de jeux inondable.",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "origine",
+            "title": "Type d'origine",
+            "description": "Indigènes : Taxons dont l’aire naturelle de répartition se superpose, au moins en partie, au territoire considéré.<br>Cryptogènes : Taxons dont l’aire de répartition naturelle et leur origine éventuelle avant une possible expansion liée à l’homme ne peuvent être définies en raison d’un manque d’informations<br>Exogènes : Taxons dont l’aire naturelle de répartition ne se superpose pas au territoire considéré ( dont archéophytes et néophytes)",
+            "example": "Cryptogène",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Indigène",
+                    "Cryptogène",
+                    "Exogène"
+                ]
+            }
+        },
+        {
+            "name": "parc_urbain",
+            "title": "Parc urbain",
+            "description": "Vaste espace public végétalisé structurant à l'échelle de la ville. Cet aménagement, généralement clos, propose une large diversité végétale et offre de nombreuses aménités aux habitants",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "partie_toxique",
+            "title": "Partie toxique  ",
+            "description": "4 - La sève est phototoxique (autres types de toxicité?)<br>5 - Fleurs<br>6-Ecorce,<br>7-Racines<br>♠Valeurs multiples possibles : Fruits, Graines, Feuilles, Sève, Fleurs, Ecorce, Racines, Aucun, Aucune",
+            "example": [
+                "Feuilles",
+                "Graines"
+            ],
+            "type": "array",
+            "constraints": {
+                "required": false
+            },
+            "arrayItem": {
+                "constraints": {
+                    "enum": [
+                        "Fruits",
+                        "Graines",
+                        "Feuilles",
+                        "Sève",
+                        "Fleurs",
+                        "Ecorce",
+                        "Racines",
+                        "Aucun",
+                        "Aucune"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "place",
+            "title": "Place",
+            "description": "Espace public structurant à l'échelle de la ville ou du quartier pouvant accueillir de multiples usages<br>Un espace de circulation, d’interaction et lieu de promenade. Ce lieu attractif est propice aux rendez-vous, aux petits et grands rassemblements.  La place est une scène idéale de représentation collective, sociale et urbaine à haute valeur patrimoniale.",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "placette",
+            "title": "Placette",
+            "description": "Petite place publique d’un quartier de ville ou de village offrant un lieu central aspirant à la convivialité, au confort et à l'identité locale, valorisant le patrimoine auquel il est parfois visuellement associé.",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "pollen_nectar",
+            "title": "Capacité à générer des pollens et nectars",
+            "description": "Capacité à générer des pollens et nectars",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "port",
+            "title": "Forme",
+            "description": "Forme, port, silhouette de l’arbre adulte, en condition naturelle isolée.<br>valeurs possibles : <br>1-colonnaire (Colonnaire, Fastigié, Stipe, Conique étroit…), <br>2-pyramidal (Pyramidal, Conique, Conique large),<br>3-arrondi (Arrondi, Ovale, Boule, Globuleux, Sphérique, Ovoïde),<br>4-étalé (Etalé, Rampant, Tabulaire, Verticillé, Etalé bas, Parasol),<br>5-pleureur (Pleureur),<br>6-buissonnant (Buissonnant),<br>7-liane (Liane, Grimpant)",
+            "example": "Colonnaire",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Inconnu",
+                    "Colonnaire",
+                    "Pyramidal",
+                    "Arrondi",
+                    "Étalé",
+                    "Pleureur",
+                    "Buissonnant",
+                    "Liane"
+                ]
+            }
+        },
+        {
+            "name": "quai_berge",
+            "title": "Quai et berge",
+            "description": "Voie publique aménagée en bordure de cours d'eau aux aménagements naturalisés (berge) ou minéralisés (quai). Voués à l'accostage et prioritairement à la déambulation et à la circulation des modes actifs, elle offre sécurité et confort d'usages.<br>",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "racines_degats",
+            "title": "Dégâts",
+            "description": "La plante fait des drageons, ou des rejets de souche.<br>La plante a besoin d'un grand volume de sol et le système racinaire peut soulever le trottoir, endommager les structures souterraines. ",
+            "example": "Racines agressives",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Racines agressives",
+                    "Drageonnantes",
+                    "Aucun"
+                ]
+            }
+        },
+        {
+            "name": "racines_systeme",
+            "title": "Systèmes racinaires",
+            "description": "1 – Système racinaire pivotant : Une racine verticale prépondérante (pivot), développement de longs pivots secondaires et de racines horizontales <br>2 – Système racinaire traçant : un pivot qui avorte rapidement, laissant la place à des racines horizontales et de courts pivots verticaux. La surface prospectée est étendue mais peu profonde.<br>3 – Système en cœur : Caractérisé par un mélange de racines horizontales, obliques et verticales – racines moins étalées et superficielles<br>4 - Système mixte : mélange de pivotant et traçant (peu de racines obliques)",
+            "example": "Cœur",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Pivotant",
+                    "Traçant",
+                    "Cœur",
+                    "Mixte"
+                ]
+            }
+        },
+        {
+            "name": "recommandations_guides",
+            "title": "Recommandations par des guides locaux en terme de biodiversité",
+            "description": "Recommandations par des guides locaux en terme de biodiversité",
+            "example": "Espèce non citée",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Espèce citée dans plusieurs guides",
+                    "Espèce citée dans un guide",
+                    "Espèce non citée"
+                ]
+            }
+        },
+        {
+            "name": "resistance_chaleur",
+            "title": "Chaleur",
+            "description": "Voire hyperthermophile : développement optimal en milieu chaud – plus de 30° <br>Mésothermophile : Les plantes ne subiront pas ou peu de dommages pendant des vagues de chaleur importantes<br>Résistante : La plante peut survivre à des vagues de chaleurs, si elles ne sont pas trop intenses, ou trop longues<br>Intolérante : La plante ne tolère pas les fortes chaleurs<br>",
+            "example": "Thermophile",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Thermophile",
+                    "Mésothermophile",
+                    "Résistante",
+                    "Intolérante"
+                ]
+            }
+        },
+        {
+            "name": "resistance_gel",
+            "title": "Résistance au gel",
+            "description": "Résistance au gel faible/moy/forte<br>Faible : 0<br>Moyenne : - 5/-10<br>Forte : - 15<br>(trsè forte : -25 et +)",
+            "example": "Moyenne",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Faible",
+                    "Moyenne",
+                    "Forte",
+                    "Très forte"
+                ]
+            }
+        },
+        {
+            "name": "resistance_secheresse",
+            "title": "Sécheresse",
+            "description": "1 – Xérophyte : Plante capable de vivre dans des régions habituellement sèches (déserts) ou dans des milieux physiologiquement secs (sols salés). Possède des adaptations morphologiques /physiologiques à la sécheresse. <br>2 – Mésoxérophyte : Se développe bien dans les millieux secs, mais ne supporte pas une sécheresse extrême. <br>3 - Peut résister à une sécheresse - si elle n'est pas trop longue ou <br> 4 – Mésophyte : Se développe le mieux dans des conditions d’humidité intermédiaire. Ne résiste pas très bien à la sécheresse. Elles peuvent avoir quelques adaptations à la sécheresse ou à la sur-humidité.  <br>5 – Hygrocline : Préfère un milieu assez humide. Ne supporte pas la sécheresse.",
+            "example": "Hygrocline",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Xérophyte",
+                    "Mésoxérophyte",
+                    "Résistant",
+                    "Mésophyte",
+                    "Hygrocline"
+                ]
+            }
+        },
+        {
+            "name": "resistance_vent",
+            "title": "Vents",
+            "description": "Les plantes adaptées au vent ont des branches solides, et un système racinaire développé qui leur permet de résister au chablis (déracinement).",
+            "example": "Intolérant",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Adapté",
+                    "Tolérant",
+                    "Intolérant"
+                ]
+            }
+        },
+        {
+            "name": "sol_salinite",
+            "title": "Salinité",
+            "description": "1 Euhalophyte : Ne pousse que dans des environnements salés – OU – haute tolérance au sel, avec un effet favorable du sel sur la plante (croissance et productivité) <br>2 : Tolère bien le sel– stratégies - excrétion, compartimentalisation, réduction de l’influx de sodium <br>3 : Tolérance plus faible au sel-  Ces plantes réussissent à minimiser le transport des ions de sodium vers les parties aériennes (3a - très tolérante, 3b assez tolérante)<br>4 : Intolérance au sel - Effet négatifs, (ralentissement de la croissance, voire mort) ",
+            "example": "Halophyte facultative",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Euhalophyte",
+                    "Halophyte facultative",
+                    "Glycophyte tolérante",
+                    "Glycophyte intolérante"
+                ]
+            }
+        },
+        {
+            "name": "sol_texture",
+            "title": "Besoins de texture",
+            "description": "Sableux : draine très bien, peu fertile, beaucoup d’érosion, chauffe rapidement<br>2 – Limoneux : fertile, retient moyennement l’eau, se compacte facilement, moins de 10% d’argile <br>3 – Argileux : fertile, retient bien l’eau, plus de 10% d’argile.<br>4 -Humifère : foncé – sol riche en matière organique – fertile – retient bien l’eau en étant pas trop compact - acide<br>♠Valeurs multiples possibles : Sable, Limon, Argile, Humus, Gravier/roches",
+            "example": [
+                "Sable",
+                "Limon"
+            ],
+            "type": "array",
+            "constraints": {
+                "required": false
+            },
+            "arrayItem": {
+                "constraints": {
+                    "enum": [
+                        "Sable",
+                        "Limon",
+                        "Argile",
+                        "Humus",
+                        "Gravier/roches"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "square",
+            "title": "Square",
+            "description": "Jardin public de proximité, généralement clos en cœur de quartier offrant une ambiance rassurante et calme propice au séjour, à la détente et aux jeux.",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "stationnement",
+            "title": "Stationnement",
+            "description": "Espaces spécifiquement aménagés pour le stationnement des véhicules en secteur urbain et péri urbain, sur des places ou le long des voies",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "structure",
+            "title": "Structurer",
+            "description": "Un alignement qui cadre un point de vue vers un monument mais aussi le port architecturé des<br>arbres, le dessin des branches charpentières… le végétal permet de souligner des limites, des lignes<br>directrices.<br>",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "symbolique",
+            "title": "Symbolique",
+            "description": "le prestige et le rôle symbolique des plantations permet de jouer/de faire écho avec le patrimoine architectural. Le végétal peut également conforter une identité locale en lien avec l’histoire du lieu ou évoquer un lieu particulier ou sacré.<br>",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "toxique",
+            "title": "Toxicité",
+            "description": "Oui (majeure ou mineure)<br>Non",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        },
+        {
+            "name": "vitesse_croissance",
+            "title": "Vitesse de croissance",
+            "description": "Critère qualitatif - fourchette pour vérifier : <br>1 : 60+cm ans<br>2 : 30/60, <br>3- : de 30 par an. <br>Catégories intermédiaires si incertitude -  moyenne/rapide, lente/moyenne",
+            "example": "Moyenne",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": [
+                    "Rapide",
+                    "Moyenne",
+                    "Lente"
+                ]
+            }
+        },
+        {
+            "name": "voie_peripherique",
+            "title": "Voie périphérique",
+            "description": "Espace public linéaire assurant le lien entre la ville centre et sa périphérie. Il est une transition entre des secteurs urbanisés et péri-urbanisés voire des espaces ruraux. Il constitue une entrée de ville et/ou dessert des zones d'ha-bitation et d'activités économiques. Exemples: bas-côtés et dépendances routières de ZAC, etc.",
+            "type": "boolean",
+            "constraints": {
+                "required": false
+            },
+            "trueValues": [
+                "oui",
+                "Oui",
+                "OUI",
+                "o",
+                "O",
+                "vrai",
+                "Vrai",
+                "VRAI",
+                "true",
+                "True",
+                "TRUE",
+                "1"
+            ],
+            "falseValues": [
+                "non",
+                "Non",
+                "NON",
+                "n",
+                "N",
+                "faux",
+                "Faux",
+                "FAUX",
+                "false",
+                "False",
+                "FALSE",
+                "0"
+            ]
+        }
+    ],
+    "missingValues": [
+        "",
+        "NA",
+        "NaN",
+        "N/A"
+    ],
+    "primaryKey": "ID"
+}
