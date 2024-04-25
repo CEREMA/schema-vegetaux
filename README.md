@@ -73,7 +73,7 @@ Pour `ID`, il est possible d'utiliser l'identifiant [GBIF](https://www.gbif.org/
 
 ### Champs à valeurs multiples
 
-Les champs à valeurs multiples acceptent plusieurs valeurs. C'est par exemple le cas du champ `sols_texture` (besoins de texture)
+Les champs à valeurs multiples sont de type `array` (liste). C'est par exemple le cas du champ `sols_texture` (besoins de texture)
 
 Pour mentionner plusieurs valeurs, utiliser la nomenclature suivante :
 
