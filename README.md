@@ -9,6 +9,10 @@ Ce standard de données vise à caractériser les espèces végétales de façon
 | ▶ [Consulter le schéma](schema.md) | 📝 [Voir un fichier exemple](sesame13.csv) | ⚙[Voir le schéma au format TableSchema](schema.json) |
 | ---------------------------------- | ----------------------------------------- | ---------------------------------------------------- |
 
+### Auteurs du schéma
+
+INRAE Villa Thuret, CEREMA et Conseil Départemental des Bouches-du-Rhône
+
 ## 🌳 Lien avec le projet Sesame 13
 
 <p align=center><img src=sesame-national.png width='50%' align=center></p>
