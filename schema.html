@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>vegetaux</title>
+<style type="text/css">
+body {
+  font-family: sans-serif;
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+body, .footnotes, code { font-size: .9em; }
+li li { font-size: .95em; }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+pre, img { max-width: 100%; }
+pre, pre:hover {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+pre code {
+  display: block;
+  overflow-x: auto;
+}
+code { font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace; }
+:not(pre) > code, code[class] { background-color: #F8F8F8; }
+code.language-undefined, pre > code:not([class]) {
+  background-color: inherit;
+  border: 1px solid #eee;
+}
+table {
+  margin: auto;
+  border-top: 1px solid #666;
+}
+table thead th { border-bottom: 1px solid #ddd; }
+th, td { padding: 5px; }
+thead, tfoot, tr:nth-child(even) { background: #eee; }
+blockquote {
+  color: #666;
+  margin: 0;
+  padding-left: 1em;
+  border-left: 0.5em solid #eee;
+}
+hr, .footnotes::before { border: 1px dashed #ddd; }
+.frontmatter { text-align: center; }
+#TOC .numbered li { list-style: none; }
+#TOC .numbered { padding-left: 0; }
+#TOC .numbered ul { padding-left: 1em; }
+table, .body h2 { border-bottom: 1px solid #666; }
+.body .appendix, .appendix ~ h2 { border-bottom-style: dashed; }
+.footnote-ref a::before { content: "["; }
+.footnote-ref a::after { content: "]"; }
+section.footnotes::before {
+  content: "";
+  display: block;
+  max-width: 20em;
+}
+
+@media print {
+  body {
+    font-size: 12pt;
+    max-width: 100%;
+  }
+  tr, img { page-break-inside: avoid; }
+}
+@media only screen and (min-width: 992px) {
+  pre { white-space: pre; }
+}
+</style>
+</head>
+<body>
+<div class="include-before">
+</div>
+<div class="frontmatter">
+<div class="title"><h1>vegetaux</h1></div>
+<div class="author"><h2></h2></div>
+<div class="date"><h3></h3></div>
+</div>
+<div class="body">
+<h2 id="vegetaux">vegetaux</h2>
+<p>Végétaux</p>
+<p>Spécification du fichier relatif aux végétaux</p>
+<ul>
+<li>Schéma créé le : 04/09/24</li>
+<li>Site web : <a href="https://github.com/CEREMA/schema-vegetaux">https://github.com/CEREMA/schema-vegetaux</a></li>
+<li>Version : vx.x.x</li>
+<li>Valeurs manquantes : <code>&quot;&quot;</code>, <code>&quot;NA&quot;</code>, <code>&quot;NaN&quot;</code>, <code>&quot;N/A&quot;</code></li>
+<li>Clé primaire : <code>ID</code></li>
+</ul>
+<h3 id="mod-le-de-donn-es">Modèle de données</h3>
+<h5 id="liste-des-propri-t-s">Liste des propriétés</h5>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Type</th>
+<th>Obligatoire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#id---propri%C3%A9t%C3%A9-id">ID</a></td>
+<td>nombre réel</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td><a href="#nomenclature-binominale---propri%C3%A9t%C3%A9-nom_scientifique">nom_scientifique</a></td>
+<td>chaîne de caractères</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td><a href="#nom-commun---propri%C3%A9t%C3%A9-nom_commun">nom_commun</a></td>
+<td>chaîne de caractères</td>
+<td>Oui</td>
+</tr>
+<tr>
+<td><a href="#famille---propri%C3%A9t%C3%A9-famille">famille</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#capacit%C3%A9-d&#x27;accueil-des-insectes---propri%C3%A9t%C3%A9-accueil_insectes">accueil_insectes</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#aire-naturelle---propri%C3%A9t%C3%A9-aire_naturelle">aire_naturelle</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#allerg%C3%A8ne---propri%C3%A9t%C3%A9-allergisant">allergisant</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#animer---propri%C3%A9t%C3%A9-anime">anime</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#capacit%C3%A9-de-rec%C3%A9page---propri%C3%A9t%C3%A9-capacite_recepage">capacite_recepage</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#cat%C3%A9gorie-paysag%C3%A8re---propri%C3%A9t%C3%A9-categorie_paysagere">categorie_paysagere</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#capacit%C3%A9-%C3%A0-g%C3%A9n%C3%A9rer-des-cavit%C3%A9s---propri%C3%A9t%C3%A9-cavites">cavites</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#cheminement---propri%C3%A9t%C3%A9-cheminement">cheminement</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#cimeti%C3%A8re---propri%C3%A9t%C3%A9-cimetiere">cimetiere</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#%C3%A9l%C3%A9ments-comestibles-pour-l%E2%80%99avifaune-et-la-moyenne-faune---propri%C3%A9t%C3%A9-comestibles_faune">comestibles_faune</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#commentaire---propri%C3%A9t%C3%A9-commentaire_biodiversite">commentaire_biodiversite</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#commentaires---propri%C3%A9t%C3%A9-commentaire_consommation">commentaire_consommation</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#commentaire-sur-l%E2%80%99origine---propri%C3%A9t%C3%A9-commentaire_origine">commentaire_origine</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#paysage-et-cadre-de-vie---propri%C3%A9t%C3%A9-commentaire_paysage">commentaire_paysage</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#confort---propri%C3%A9t%C3%A9-confort">confort</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#conif%C3%A8re-/-feuillu---propri%C3%A9t%C3%A9-conifere_feuillu">conifere_feuillu</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#contraintes-physiques---propri%C3%A9t%C3%A9-contraintes_physiques">contraintes_physiques</a></td>
+<td>liste</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#cort%C3%A8ge-v%C3%A9g%C3%A9tal---propri%C3%A9t%C3%A9-cortege_naturel">cortege_naturel</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#cour-d%E2%80%99%C3%A9cole---propri%C3%A9t%C3%A9-cour_ecole">cour_ecole</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#danger-m%C3%A9canique---propri%C3%A9t%C3%A9-danger_mecanique">danger_mecanique</a></td>
+<td>liste</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#envahissante---propri%C3%A9t%C3%A9-envahissante">envahissante</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#espace-interm%C3%A9diaire---propri%C3%A9t%C3%A9-espace_intermediaire">espace_intermediaire</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#composition-foliaire---propri%C3%A9t%C3%A9-feuilles_composition">feuilles_composition</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#densit%C3%A9-du-feuillage---propri%C3%A9t%C3%A9-feuilles_densite">feuilles_densite</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#forme-des-feuilles---propri%C3%A9t%C3%A9-feuilles_forme">feuilles_forme</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#rugosit%C3%A9---propri%C3%A9t%C3%A9-feuilles_rugosite">feuilles_rugosite</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#taille-des-feuilles---propri%C3%A9t%C3%A9-feuilles_taille">feuilles_taille</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#feuillage---propri%C3%A9t%C3%A9-feuilles_type">feuilles_type</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#couleur---propri%C3%A9t%C3%A9-fleurs_couleur">fleurs_couleur</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#p%C3%A9riode---propri%C3%A9t%C3%A9-fleurs_periode">fleurs_periode</a></td>
+<td>liste</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#valorisation-des-fleurs---propri%C3%A9t%C3%A9-fleurs_valorisation">fleurs_valorisation</a></td>
+<td>liste</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#fruit-comestible---propri%C3%A9t%C3%A9-fruits_comestibles">fruits_comestibles</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#commentaire---propri%C3%A9t%C3%A9-fruits_commentaire">fruits_commentaire</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#grande-voie-de-circulation---propri%C3%A9t%C3%A9-grande_voie">grande_voie</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#capacit%C3%A9-%C3%A0-g%C3%A9n%C3%A9rer-des-habitats,-r%C3%B4le-de-plante-h%C3%B4te---propri%C3%A9t%C3%A9-habitats_hote">habitats_hote</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#hauteur-maximale---propri%C3%A9t%C3%A9-hauteur_max">hauteur_max</a></td>
+<td>nombre réel</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#caract%C3%A8re-indig%C3%A8ne/exog%C3%A8ne---propri%C3%A9t%C3%A9-indigene_exogene">indigene_exogene</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#inflammabilit%C3%A9---propri%C3%A9t%C3%A9-inflammabilite">inflammabilite</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#utilisable-en-infusion---propri%C3%A9t%C3%A9-infusion">infusion</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#insectes-observ%C3%A9s---propri%C3%A9t%C3%A9-insectes">insectes</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#int%C3%A9r%C3%AAt-pour-les-l%C3%A9pidopt%C3%A8res---propri%C3%A9t%C3%A9-interet_lepidopteres">interet_lepidopteres</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#largeur---propri%C3%A9t%C3%A9-largeur_houppier">largeur_houppier</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#long%C3%A9vit%C3%A9---propri%C3%A9t%C3%A9-longevite">longevite</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#bord-de-mer-et-%C3%A9tang---propri%C3%A9t%C3%A9-mer_etang">mer_etang</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#noue-et-bassin-d%E2%80%99orage---propri%C3%A9t%C3%A9-noue_bassin_orage">noue_bassin_orage</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#type-d&#x27;origine---propri%C3%A9t%C3%A9-origine">origine</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#parc-urbain---propri%C3%A9t%C3%A9-parc_urbain">parc_urbain</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#partie-toxique-%C2%A0---propri%C3%A9t%C3%A9-partie_toxique">partie_toxique</a></td>
+<td>liste</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#place---propri%C3%A9t%C3%A9-place">place</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#placette---propri%C3%A9t%C3%A9-placette">placette</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#capacit%C3%A9-%C3%A0-g%C3%A9n%C3%A9rer-des-pollens-et-nectars---propri%C3%A9t%C3%A9-pollen_nectar">pollen_nectar</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#forme---propri%C3%A9t%C3%A9-port">port</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#quai-et-berge---propri%C3%A9t%C3%A9-quai_berge">quai_berge</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#d%C3%A9g%C3%A2ts---propri%C3%A9t%C3%A9-racines_degats">racines_degats</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#syst%C3%A8mes-racinaires---propri%C3%A9t%C3%A9-racines_systeme">racines_systeme</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#recommandations-par-des-guides-locaux-en-terme-de-biodiversit%C3%A9---propri%C3%A9t%C3%A9-recommandations_guides">recommandations_guides</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#chaleur---propri%C3%A9t%C3%A9-resistance_chaleur">resistance_chaleur</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#r%C3%A9sistance-au-gel---propri%C3%A9t%C3%A9-resistance_gel">resistance_gel</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#s%C3%A9cheresse---propri%C3%A9t%C3%A9-resistance_secheresse">resistance_secheresse</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#vents---propri%C3%A9t%C3%A9-resistance_vent">resistance_vent</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#salinit%C3%A9---propri%C3%A9t%C3%A9-sol_salinite">sol_salinite</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#besoins-de-texture---propri%C3%A9t%C3%A9-sol_texture">sol_texture</a></td>
+<td>liste</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#square---propri%C3%A9t%C3%A9-square">square</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#stationnement---propri%C3%A9t%C3%A9-stationnement">stationnement</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#structurer---propri%C3%A9t%C3%A9-structure">structure</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#symbolique---propri%C3%A9t%C3%A9-symbolique">symbolique</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#toxicit%C3%A9---propri%C3%A9t%C3%A9-toxique">toxique</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#vitesse-de-croissance---propri%C3%A9t%C3%A9-vitesse_croissance">vitesse_croissance</a></td>
+<td>chaîne de caractères</td>
+<td>Non</td>
+</tr>
+<tr>
+<td><a href="#voie-p%C3%A9riph%C3%A9rique---propri%C3%A9t%C3%A9-voie_peripherique">voie_peripherique</a></td>
+<td>booléen</td>
+<td>Non</td>
+</tr>
+</tbody>
+</table>
+<h4 id="id-propri-t-id">id - Propriété <code>ID</code></h4>
+<blockquote>
+<p><em>Description : Identifiant de l’espèce selon Sesame 13<br/>Ex : 10</em></p>
+</blockquote>
+<ul>
+<li>Valeur obligatoire</li>
+<li>Type : nombre réel</li>
+</ul>
+<h4 id="nomenclature-binominale-propri-t-nom-scientifique">Nomenclature binominale - Propriété <code>nom_scientifique</code></h4>
+<blockquote>
+<p><em>Description : <br>Nom scientifique de l’espèce (en latin)<br/>Ex : Jasminum nudiflorum Lindl.</em></p>
+</blockquote>
+<ul>
+<li>Valeur obligatoire</li>
+<li>Type : chaîne de caractères</li>
+</ul>
+<h4 id="nom-commun-propri-t-nom-commun">Nom commun - Propriété <code>nom_commun</code></h4>
+<blockquote>
+<p><em>Description : Nom commun (en français) de l’espèce<br/>Ex : Érable de Montpellier</em></p>
+</blockquote>
+<ul>
+<li>Valeur obligatoire</li>
+<li>Type : chaîne de caractères</li>
+</ul>
+<h4 id="famille-propri-t-famille">Famille - Propriété <code>famille</code></h4>
+<blockquote>
+<p><em>Description : Famille de l’espèce<br/>Ex : Betulaceae</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+</ul>
+<h4 id="capacit-d-accueil-des-insectes-propri-t-accueil-insectes">Capacité d’accueil des insectes - Propriété <code>accueil_insectes</code></h4>
+<blockquote>
+<p><em>Description : Capacité d’accueil des insetes<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="aire-naturelle-propri-t-aire-naturelle">Aire naturelle - Propriété <code>aire_naturelle</code></h4>
+<blockquote>
+<p><em>Description : Le niveau de précision est le pays, ou la région (selon la taille du pays, la répartition de l’espèce) dans lequel l’espèce se situe de façon naturelle<br/>Ex : Maroc, Andalousie</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+</ul>
+<h4 id="allerg-ne-propri-t-allergisant">Allergène - Propriété <code>allergisant</code></h4>
+<blockquote>
+<p><em>Description : Oui/Non, et si plus d’informations :<br>Faible ou négligeable – Il faut une très grande quantité de pollen pour déclencher une allergie et cela ne concerne que les personnes les plus sensibles. <br>Modéré <br>Fort - Quelques pollens suffisent à provoquer une réaction allergique<br><br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="animer-propri-t-anime">Animer - Propriété <code>anime</code></h4>
+<blockquote>
+<p><em>Description : la floraison printanière exubérante de certains arbres et/ou le feuillage lumineux à l’automne permet de qualifier une ambiance, un signal ou un repère spatial.<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="capacit-de-rec-page-propri-t-capacite-recepage">Capacité de recépage - Propriété <code>capacite_recepage</code></h4>
+<blockquote>
+<p><em>Description : Oui/Non et commentaires<br>Arbres feuillus se recèpent mieux. <br>La capacité et vigueur de recépage diminue avec l’âge<br>La plupart des arbustes se recèpent<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="cat-gorie-paysag-re-propri-t-categorie-paysagere">Catégorie paysagère - Propriété <code>categorie_paysagere</code></h4>
+<blockquote>
+<p><em>Description : Arbre : Végétal ligneux atteignant au moins 7m de haut, et développant dès le départ une tige principale forte (tronc) <br>Arbuste : Végétal ligneux ne dépassant pas 7m de haut, et développant dès le départ un tronc, portant les tiges secondaires à une certaine distance du sol.<br>Arbrisseau : Végétal ligneux ne dépassant pas 7m de haut (en général pas plus de 4), et ne développant pas tronc, mais de nombreuses tiges ramifiées dès la base.<br>Sous arbrisseau : Végétal ligneux, sous-frutescent, inférieur à 1m, et dont l’extrémité des rameaux herbacées se dessèche chaque hiver.<br>Herbacée : Végétal tendre, non ligneux - annuelle, bisannuelle ou vivace.<br/>Ex : Liane</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Arbre</li>
+<li>Arbuste</li>
+<li>Arbrisseau</li>
+<li>Sous-arbrisseau</li>
+<li>Herbacée</li>
+<li>Liane</li>
+</ul>
+</li>
+</ul>
+<h4 id="capacit-g-n-rer-des-cavit-s-propri-t-cavites">Capacité à générer des cavités - Propriété <code>cavites</code></h4>
+<blockquote>
+<p><em>Description : Capacité à générer des cavités<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="cheminement-propri-t-cheminement">Cheminement - Propriété <code>cheminement</code></h4>
+<blockquote>
+<p><em>Description : Espace linéaire dédiés exclusivement aux modes actifs offrant à la fois confort sécurité et convivialité à ses usagers. Exemples: pistes, sentiers, etc.<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="cimeti-re-propri-t-cimetiere">Cimetière - Propriété <code>cimetiere</code></h4>
+<blockquote>
+<p><em>Description : Espace funéraire et lieu de recueillement de sépultures, il est souvent clos et ouvert au public. Plus ou moins végétalisé, cet espace intègre une symbolique forte (végétale, ornementale, etc.) qui varie en fonction des cultures et des lieux géographiques.<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="l-ments-comestibles-pour-l-avifaune-et-la-moyenne-faune-propri-t-comestibles-faune">Éléments comestibles pour l’avifaune et la moyenne faune - Propriété <code>comestibles_faune</code></h4>
+<blockquote>
+<p><em>Description : Éléments comestibles pour l’avifaune et la moyenne faune<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="commentaire-propri-t-commentaire-biodiversite">Commentaire - Propriété <code>commentaire_biodiversite</code></h4>
+<blockquote>
+<p><em>Description : Commentaire associé aux services rendus à la biodiversité<br/>Ex : Visité par de nombreux passereaux, papillons, bourdons. Il est nectarifère</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+</ul>
+<h4 id="commentaires-propri-t-commentaire-consommation">Commentaires - Propriété <code>commentaire_consommation</code></h4>
+<blockquote>
+<p><em>Description : Commentaire associé à la consommation par les humains<br/>Ex : En dehors de son utilisation en bouquets secs,ses fleurs ont  des vertus antitussives et diurétiques. En cuisine, les immortelles ne valent pas le vrai curry, un mélange d’épices complexe au parfum plus subtil et tenant beaucoup mieux à la cuisson. En Espagne, les fleurs de l’immortelle des dunes sont toutefois utilisées en infusion et fournissent une tisane improprement appelée « manzanilla », ce qui signifie camomille.</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+</ul>
+<h4 id="commentaire-sur-l-origine-propri-t-commentaire-origine">Commentaire sur l’origine - Propriété <code>commentaire_origine</code></h4>
+<blockquote>
+<p><em>Description : Commentaire associé à l’origine de l’espèce<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+</ul>
+<h4 id="paysage-et-cadre-de-vie-propri-t-commentaire-paysage">Paysage et cadre de vie - Propriété <code>commentaire_paysage</code></h4>
+<blockquote>
+<p><em>Description : Commentaire associé au paysage et au cadre de vie<br/>Ex : Arbre au feuillage très décoratif, il est utilisé en alignement dans sa zone de répartition d’origine, mais sera plutôt utilisé comme sujet isolé, bosquet, ou haie haute sous nos latitudes. Il requiert une température d’au moins 5°C avec son port dressé puis étalé avec les années. Esthétique   avec des branches fortes, il est bon pour la faune. Feuilles odorantes</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+</ul>
+<h4 id="confort-propri-t-confort">Confort - Propriété <code>confort</code></h4>
+<blockquote>
+<p><em>Description : la qualité d’ombrage de certaines essences apporte une voûte protectrice des rayons de soleil, le végétal peut également être un brise-vent ou/et un écran visuel (pour masquer) ou marque une limite infranchissable (pour protéger).<br><br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="conif-re-feuillu-propri-t-conifere-feuillu">Conifère / feuillu - Propriété <code>conifere_feuillu</code></h4>
+<blockquote>
+<p><em>Description : Classe d’appartenance de l’espèce à l’embranchement des pinophytes (conifères) ou non.<br>0-inconnu : valeur recherchée mais inconnue<br>1-conifère : plante appartenant à l’embranchement des pinophytes. Synonyme : résineux.<br>2-feuillu : plante n’appartenant pas à l’embranchement des pinophytes.<br/>Ex : Inconnu</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Inconnu</li>
+<li>Conifère</li>
+<li>Feuillu</li>
+</ul>
+</li>
+</ul>
+<h4 id="contraintes-physiques-propri-t-contraintes-physiques">Contraintes physiques - Propriété <code>contraintes_physiques</code></h4>
+<blockquote>
+<p><em>Description : détails dans commentaires<br>♠Valeurs multiples possibles : Epines, Brûlures, Poils urticants, Fruits salissants, Dépôt de miellat, Aucun, Aucune<br/>Ex : [‘Dépôt de miellat’, ‘Fruits salissants’]</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : liste</li>
+</ul>
+<h4 id="cort-ge-v-g-tal-propri-t-cortege-naturel">Cortège végétal - Propriété <code>cortege_naturel</code></h4>
+<blockquote>
+<p><em>Description : Certaines espèces sont associées entre elles dans la nature et il peut être intéressant dans certains cas de reproduire cette association (affinités des végétaux entre eux). Ainsi le cortège végétal proposé est un ensemble d’espèces ayant des caractéristiques écologiques communes.<br/>Ex : romarin,ciste, lavande,pistachier lentisque,chêne kermès, génévrier oxycèdre</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+</ul>
+<h4 id="cour-d-cole-propri-t-cour-ecole">Cour d’école - Propriété <code>cour_ecole</code></h4>
+<blockquote>
+<p><em>Description : Espace extérieur clos réservé aux établissements scolaire à dominante minérale. Soumis à un règlement, ils peuvent être aménagés avec des structures/équipements sportifs et pédagogiques.<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="danger-m-canique-propri-t-danger-mecanique">Danger mécanique - Propriété <code>danger_mecanique</code></h4>
+<blockquote>
+<p><em>Description : Ex - La plupart des Eucalyptus<br>2 - Ex - chute des cônes d’Araucaria. <br>♠Valeurs multiples possibles : Branches cassantes, Fructification pouvant entraîner des dommages, Chute d’arbre, Aucun, Aucune<br/>Ex : [‘Branches cassantes’, ‘Fructification pouvant entraîner des dommages’]</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : liste</li>
+</ul>
+<h4 id="envahissante-propri-t-envahissante">Envahissante - Propriété <code>envahissante</code></h4>
+<blockquote>
+<p><em>Description : Espèce envahissante (émergente, modérée, majeure - noter dans commentaires)<br>2 – EVEpotE - Espèce potentiellement envahissante - Alerte - Espèce végétale exotique peu fréquente sur le territoire considéré, elle est citée comme envahissante ailleurs et a un risque de prolifération intermédiaire à élevé <br>3 - EVEpotE - Prévention -  Espèce végétale exotique a priori absente du territoire considéré, citée comme envahissante ailleurs et ayant un risque intermédiaire à élevé de prolifération .<br>4 - L’espèce n’est pas sur la liste de prévention de PACA, mais elle est considérée comme envahissante à l’étranger - considerer le danger potentiel<br>a : Beaucoup de territoires la considèrent comme envahissante - évaluer le danger potentiel<br>b :  Peu (1 à 3 max) de territoires considèrent cette espèce comme enhavissante - la plante n’est pas considérée comme potentiellement invasive. <br>5 - Espèce non envahissante<br>5b - l’Espèce est peu plantée, peu connue<br/>Ex : EVEE</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>EVEE</li>
+<li>Alerte</li>
+<li>Prévention</li>
+<li>A-EVEE à l’étranger</li>
+<li>B-EVEE à l’étranger</li>
+<li>Non</li>
+</ul>
+</li>
+</ul>
+<h4 id="espace-interm-diaire-propri-t-espace-intermediaire">Espace intermédiaire - Propriété <code>espace_intermediaire</code></h4>
+<blockquote>
+<p><em>Description : Espace interstitiel non construit formant des intervalles et respirations entre les bâtiments. Il est fréquent dans les quartiers des grands ensembles. Non structurant et parfois non entretenus, ils constituent des « respirations » vé-gétalisées dans le tissu urbain, à l’image des pas japonais dans la ville.<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="composition-foliaire-propri-t-feuilles-composition">Composition foliaire - Propriété <code>feuilles_composition</code></h4>
+<blockquote>
+<p><em>Description : Composition foliaire<br/>Ex : Simple</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Simple</li>
+<li>Composée</li>
+</ul>
+</li>
+</ul>
+<h4 id="densit-du-feuillage-propri-t-feuilles-densite">Densité du feuillage - Propriété <code>feuilles_densite</code></h4>
+<blockquote>
+<p><em>Description : Classe de densité du feuillage de l’arbre adulte en condition naturelle isolée. <br>0-inconnu : valeur recherchée mais inconnue<br>1-ouvert : feuillage peu dense, la lumière traverse aisément. Exemple : Saule blanc, Févier d’Amérique<br>2-moyennement dense : feuillage moyennement dense, la lumière traverse difficile. Exemple : Tilleul, Pin sylvestre<br>3-dense : feuillage très dense, la lumière ne traverse quasiment pas. Exemple : Génévrier, Erable de Montpellier<br/>Ex : Moyennement dense</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Inconnu</li>
+<li>Ouvert</li>
+<li>Moyennement dense</li>
+<li>Dense</li>
+</ul>
+</li>
+</ul>
+<h4 id="forme-des-feuilles-propri-t-feuilles-forme">Forme des feuilles - Propriété <code>feuilles_forme</code></h4>
+<blockquote>
+<p><em>Description : Classe de la forme du limbe de la feuille (ou de la foliole/foliolule si feuille composée).<br>0-inconnu : valeur recherchée mais inconnue,<br>1-aiguille : Forme des feuilles très fine et très allongée (beaucoup plus longue que large) (Aiguille, linéaire, aciculaire…)<br>2-lobé : Forme plus longue que large, en partie découpée (Lobée, pennatilobée,  pennatifide, pennatipartite, pennatiséquée…)<br>3-lancéolé ou ovale : Forme plus longue que large, entière (Lancéolé, oblongue, ovale, obovale, elliptique, oblancéolée, sagitée, falciforme…)<br>4-palmilobé : Forme aussi longue que large, en partie découpée (Incisé, acutilobée, pédatilobée, pédatifide, palmilobée, palmatilobée, palmatifide, palmatipartite…)<br>5-ronde : Forme aussi longue que large, entière (Ronde, cordée, réniforme, orbiculaire, luné, lunulée, peltée, deltoïde, cordiforme, en éventail…)<br>6-écaille : Forme particulière en écaille (Feuilles plates et très courte imbriquée les unes dans les autres)<br/>Ex : Lancéolé ou ovale</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Inconnu</li>
+<li>Aiguille</li>
+<li>Lobée</li>
+<li>Lancéolé ou ovale</li>
+<li>Palmilobé</li>
+<li>Ronde</li>
+<li>Écaille</li>
+</ul>
+</li>
+</ul>
+<h4 id="rugosit-propri-t-feuilles-rugosite">Rugosité - Propriété <code>feuilles_rugosite</code></h4>
+<blockquote>
+<p><em>Description : Classe de rugosité du limbe de la feuille (ou de la foliole/foliolule si feuille composée).<br>0-inconnu : valeur recherchée mais inconnue,<br>1-glabre : Feuilles glabres et souples des 2 côtés,<br>2-cireuse : Feuille avec cuticule supérieure épaisse (et glabre face inférieure),<br>3-cireuse sur deux faces : Feuille avec 2 faces cireuses,<br>4-poilue : Feuille avec 1 face poilue  (glabre et souple sur l’autre face),<br>5-poilue sur deux faces : Feuille avec 2 faces poilues ,<br>6-cireuse et poilue :Feuille avec cuticule supérieure épaisse et face inférieure poilue,<br>7-limbe réduit : Forme particulière en aiguille ou écaille<br/>Ex : Limbe réduit</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Inconnu</li>
+<li>Glabre</li>
+<li>Cireuse</li>
+<li>Cireuse sur deux faces</li>
+<li>Poilue</li>
+<li>Poilue sur deux faces</li>
+<li>Cireuse et poilue</li>
+<li>Limbe réduit</li>
+</ul>
+</li>
+</ul>
+<h4 id="taille-des-feuilles-propri-t-feuilles-taille">Taille des feuilles - Propriété <code>feuilles_taille</code></h4>
+<blockquote>
+<p><em>Description : Classe de longueur maximale du limbe de la feuille (si feuille simple), de la foliole/foliolule (si feuille composée), de l’aiguille ou de l’écaille de l’arbre adulte en condition naturelle. <br>0-inconnu : valeur recherchée mais inconnue<br>1-petite : de 0 à 5,0cm de long (exemple  Cupressus sempervirens : 0.5-1cm, Cedrus atlantica : 2.5cm)<br>2-moyenne : de 4,9cm à 14,9cm de long (exemple  Crataegus monogyna : 3-5cm, Fraxinus ornus : 5-10cm, Celtis australis : 5-12cm)<br>3-grande : 15cm de long et plus (Prunus persica : 8-15cm, Broussonetia papyrifera : 10-20cm, Platanus orientalis : 15-30cm, Paulownia tomentosa : 17-50cm. )<br/>Ex : Moyenne</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Inconnu</li>
+<li>Petite</li>
+<li>Moyenne</li>
+<li>Grande</li>
+</ul>
+</li>
+</ul>
+<h4 id="feuillage-propri-t-feuilles-type">Feuillage - Propriété <code>feuilles_type</code></h4>
+<blockquote>
+<p><em>Description : Classe de persistance du feuillage en condition naturelle. <br>0-inconnu : valeur recherchée mais inconnue<br>1-caduc : feuilles qui tombent selon un rythme saisonnier. L’arbre n’a plus de feuille pendant une période de l’année. Synonyme : décidue.<br>2-marcescent : feuilles qui flétrissent selon un rythme saisonnier. Elles sèchent sur la plante sans s’en détacher. L’arbre perdra ses feuilles lors du débourrement qui interviendra après une période sans feuille vivante.<br>3-semi-persistant : feuilles qui tombent selon un rythme saisonnier, mais suivie immédiatement de la repousse. Synonyme : brévidécidue.<br>4-persistant : feuilles qui ne tombent pas selon un rythme saisonnier. Le feuillage reste vert et fonctionnel en permanence.<br/>Ex : Caduc</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Inconnu</li>
+<li>Caduc</li>
+<li>Marcescent</li>
+<li>Semi-persistant</li>
+<li>Persistant</li>
+</ul>
+</li>
+</ul>
+<h4 id="couleur-propri-t-fleurs-couleur">Couleur - Propriété <code>fleurs_couleur</code></h4>
+<blockquote>
+<p><em>Description : Une ou plusieurs couleurs de la floraison<br>Couleur de la floraison = dominante<br/>Ex : vert puis pourpre</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+</ul>
+<h4 id="p-riode-propri-t-fleurs-periode">Période - Propriété <code>fleurs_periode</code></h4>
+<blockquote>
+<p><em>Description : Les mois de floraison :<br>janvier … 12 - décembre<br>Ex : 3.5 - 5 : de mi mars à mai<br>Hiver : 12.5 – 3.5<br>Printemps : 3.5 – 6.5<br>Eté : 6.5-9.5<br>Automne :9.5 -12.5<br/>Ex : [‘5’, ‘10’]</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : liste</li>
+</ul>
+<h4 id="valorisation-des-fleurs-propri-t-fleurs-valorisation">Valorisation des fleurs - Propriété <code>fleurs_valorisation</code></h4>
+<blockquote>
+<p><em>Description : Valorisation des fleurs : esthétique, en parfum ou les deux<br>♠Valeurs multiples possibles : Apparence, Parfum, Les deux, Non<br/>Ex : [‘Non’, ‘Les deux’]</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : liste</li>
+</ul>
+<h4 id="fruit-comestible-propri-t-fruits-comestibles">Fruit comestible - Propriété <code>fruits_comestibles</code></h4>
+<blockquote>
+<p><em>Description : Le fruit est-il comestible ?<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="commentaire-propri-t-fruits-commentaire">Commentaire - Propriété <code>fruits_commentaire</code></h4>
+<blockquote>
+<p><em>Description : Commentaire associé aux fruits<br/>Ex : Capsules coriaces, contenant 4 graines</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+</ul>
+<h4 id="grande-voie-de-circulation-propri-t-grande-voie">Grande voie de circulation - Propriété <code>grande_voie</code></h4>
+<blockquote>
+<p><em>Description : Espace public linéaire structurant à l’échelle de la ville dédié en priorité à la mobilité et pouvant accueillir de habitat et des commerces. Exemples: boulevard, rambla, avenue, etc.<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="capacit-g-n-rer-des-habitats-r-le-de-plante-h-te-propri-t-habitats-hote">Capacité à générer des habitats, rôle de plante hôte - Propriété <code>habitats_hote</code></h4>
+<blockquote>
+<p><em>Description : Capacité à générer des habitats, rôle de plante hôte<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="hauteur-maximale-propri-t-hauteur-max">Hauteur maximale - Propriété <code>hauteur_max</code></h4>
+<blockquote>
+<p><em>Description : Hauteur maximale atteinte par l’arbre adulte, en condition naturelle, en mètres, arrondi à l’entier le plus proche.<br/>Ex : 10</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : nombre réel</li>
+</ul>
+<h4 id="caract-re-indig-ne-exog-ne-propri-t-indigene-exogene">Caractère Indigène/Exogène - Propriété <code>indigene_exogene</code></h4>
+<blockquote>
+<p><em>Description : SUPPRIMER<br/>Ex : Invasive avérée</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Espèce autochtone</li>
+<li>Espèce allochtone</li>
+<li>Exotique à surveiller</li>
+<li>Invasive potentielle</li>
+<li>Invasive avérée</li>
+</ul>
+</li>
+</ul>
+<h4 id="inflammabilit-propri-t-inflammabilite">Inflammabilité - Propriété <code>inflammabilite</code></h4>
+<blockquote>
+<p><em>Description : Niveau d’inflammabilité<br/>Ex : Moyen</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Faible</li>
+<li>Moyen</li>
+<li>Fort</li>
+<li>Très fort</li>
+</ul>
+</li>
+</ul>
+<h4 id="utilisable-en-infusion-propri-t-infusion">Utilisable en infusion - Propriété <code>infusion</code></h4>
+<blockquote>
+<p><em>Description : Le végétal est-il utilisable en infusion ?<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="insectes-observ-s-propri-t-insectes">Insectes observés - Propriété <code>insectes</code></h4>
+<blockquote>
+<p><em>Description : Nom des insectes, famille<br/>Ex : papillons nectar et hôte</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+</ul>
+<h4 id="int-r-t-pour-les-l-pidopt-res-propri-t-interet-lepidopteres">Intérêt pour les Lépidoptères - Propriété <code>interet_lepidopteres</code></h4>
+<blockquote>
+<p><em>Description : Intérêt pour les Lépidoptères<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="largeur-propri-t-largeur-houppier">Largeur - Propriété <code>largeur_houppier</code></h4>
+<blockquote>
+<p><em>Description : Classe de largeur maximale (diamètre) atteinte par le houppier adulte, en condition naturelle.<br>0-inconnu : valeur recherchée mais inconnue<br>1-étroit : de 0 à 3,9m de large<br>2-moyen : de 4,0m à 7,9m de large<br>3-large : de 8,0m à 19,9m de large<br>4-très large : 20,0m de large et plus<br/>Ex : Très large</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Inconnu</li>
+<li>Étroit</li>
+<li>Moyen</li>
+<li>Large</li>
+<li>Très large</li>
+</ul>
+</li>
+</ul>
+<h4 id="long-vit-propri-t-longevite">Longévité - Propriété <code>longevite</code></h4>
+<blockquote>
+<p><em>Description : Critère qualitatif - les chiffres sont un guide pour les arbres.<br>Courte : 0-25 <br>Moyenne : 25 - 75<br>Longue – 75 : 150<br>Très longue : 150+<br>Record : 500+<br/>Ex : Moyenne</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Courte</li>
+<li>Moyenne</li>
+<li>Longue</li>
+<li>Très longue</li>
+<li>Record</li>
+</ul>
+</li>
+</ul>
+<h4 id="bord-de-mer-et-tang-propri-t-mer-etang">Bord de mer et étang - Propriété <code>mer_etang</code></h4>
+<blockquote>
+<p><em>Description : Espace public  aménagé sous la forme de promenades plantées le long des espaces maritimes et lacustres. Soumis aux embruns et aux vents, seule une gamme végétale spécifique s’adapte dans ces situations.<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="noue-et-bassin-d-orage-propri-t-noue-bassin-orage">Noue et bassin d’orage - Propriété <code>noue_bassin_orage</code></h4>
+<blockquote>
+<p><em>Description : Lieu de déambulation, de séjour, de loisirs qui participe à la gestion écologique de l’eau pluviale sous différentes formes où la diversité des ambiances et le confort sont recherchés. Exemples: bassins et fossés plantés, jardins de pluie, prairie urbaine et plaine de jeux inondable.<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="type-d-origine-propri-t-origine">Type d’origine - Propriété <code>origine</code></h4>
+<blockquote>
+<p><em>Description : Indigènes : Taxons dont l’aire naturelle de répartition se superpose, au moins en partie, au territoire considéré.<br>Cryptogènes : Taxons dont l’aire de répartition naturelle et leur origine éventuelle avant une possible expansion liée à l’homme ne peuvent être définies en raison d’un manque d’informations<br>Exogènes : Taxons dont l’aire naturelle de répartition ne se superpose pas au territoire considéré ( dont archéophytes et néophytes)<br/>Ex : Cryptogène</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Indigène</li>
+<li>Cryptogène</li>
+<li>Exogène</li>
+</ul>
+</li>
+</ul>
+<h4 id="parc-urbain-propri-t-parc-urbain">Parc urbain - Propriété <code>parc_urbain</code></h4>
+<blockquote>
+<p><em>Description : Vaste espace public végétalisé structurant à l’échelle de la ville. Cet aménagement, généralement clos, propose une large diversité végétale et offre de nombreuses aménités aux habitants<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="partie-toxique-propri-t-partie-toxique">Partie toxique   - Propriété <code>partie_toxique</code></h4>
+<blockquote>
+<p><em>Description : 4 - La sève est phototoxique (autres types de toxicité?)<br>5 - Fleurs<br>6-Ecorce,<br>7-Racines<br>♠Valeurs multiples possibles : Fruits, Graines, Feuilles, Sève, Fleurs, Ecorce, Racines, Aucun, Aucune<br/>Ex : [‘Feuilles’, ‘Graines’]</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : liste</li>
+</ul>
+<h4 id="place-propri-t-place">Place - Propriété <code>place</code></h4>
+<blockquote>
+<p><em>Description : Espace public structurant à l’échelle de la ville ou du quartier pouvant accueillir de multiples usages<br>Un espace de circulation, d’interaction et lieu de promenade. Ce lieu attractif est propice aux rendez-vous, aux petits et grands rassemblements.  La place est une scène idéale de représentation collective, sociale et urbaine à haute valeur patrimoniale.<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="placette-propri-t-placette">Placette - Propriété <code>placette</code></h4>
+<blockquote>
+<p><em>Description : Petite place publique d’un quartier de ville ou de village offrant un lieu central aspirant à la convivialité, au confort et à l’identité locale, valorisant le patrimoine auquel il est parfois visuellement associé.<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="capacit-g-n-rer-des-pollens-et-nectars-propri-t-pollen-nectar">Capacité à générer des pollens et nectars - Propriété <code>pollen_nectar</code></h4>
+<blockquote>
+<p><em>Description : Capacité à générer des pollens et nectars<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="forme-propri-t-port">Forme - Propriété <code>port</code></h4>
+<blockquote>
+<p><em>Description : Forme, port, silhouette de l’arbre adulte, en condition naturelle isolée.<br>valeurs possibles : <br>1-colonnaire (Colonnaire, Fastigié, Stipe, Conique étroit…), <br>2-pyramidal (Pyramidal, Conique, Conique large),<br>3-arrondi (Arrondi, Ovale, Boule, Globuleux, Sphérique, Ovoïde),<br>4-étalé (Etalé, Rampant, Tabulaire, Verticillé, Etalé bas, Parasol),<br>5-pleureur (Pleureur),<br>6-buissonnant (Buissonnant),<br>7-liane (Liane, Grimpant)<br/>Ex : Colonnaire</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Inconnu</li>
+<li>Colonnaire</li>
+<li>Pyramidal</li>
+<li>Arrondi</li>
+<li>Étalé</li>
+<li>Pleureur</li>
+<li>Buissonnant</li>
+<li>Liane</li>
+</ul>
+</li>
+</ul>
+<h4 id="quai-et-berge-propri-t-quai-berge">Quai et berge - Propriété <code>quai_berge</code></h4>
+<blockquote>
+<p><em>Description : Voie publique aménagée en bordure de cours d’eau aux aménagements naturalisés (berge) ou minéralisés (quai). Voués à l’accostage et prioritairement à la déambulation et à la circulation des modes actifs, elle offre sécurité et confort d’usages.<br><br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="d-g-ts-propri-t-racines-degats">Dégâts - Propriété <code>racines_degats</code></h4>
+<blockquote>
+<p><em>Description : La plante fait des drageons, ou des rejets de souche.<br>La plante a besoin d’un grand volume de sol et le système racinaire peut soulever le trottoir, endommager les structures souterraines. <br/>Ex : Racines agressives</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Racines agressives</li>
+<li>Drageonnantes</li>
+<li>Aucun</li>
+</ul>
+</li>
+</ul>
+<h4 id="syst-mes-racinaires-propri-t-racines-systeme">Systèmes racinaires - Propriété <code>racines_systeme</code></h4>
+<blockquote>
+<p><em>Description : 1 – Système racinaire pivotant : Une racine verticale prépondérante (pivot), développement de longs pivots secondaires et de racines horizontales <br>2 – Système racinaire traçant : un pivot qui avorte rapidement, laissant la place à des racines horizontales et de courts pivots verticaux. La surface prospectée est étendue mais peu profonde.<br>3 – Système en cœur : Caractérisé par un mélange de racines horizontales, obliques et verticales – racines moins étalées et superficielles<br>4 - Système mixte : mélange de pivotant et traçant (peu de racines obliques)<br/>Ex : Cœur</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Pivotant</li>
+<li>Traçant</li>
+<li>Cœur</li>
+<li>Mixte</li>
+</ul>
+</li>
+</ul>
+<h4 id="recommandations-par-des-guides-locaux-en-terme-de-biodiversit-propri-t-recommandations-guides">Recommandations par des guides locaux en terme de biodiversité - Propriété <code>recommandations_guides</code></h4>
+<blockquote>
+<p><em>Description : Recommandations par des guides locaux en terme de biodiversité<br/>Ex : Espèce non citée</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Espèce citée dans plusieurs guides</li>
+<li>Espèce citée dans un guide</li>
+<li>Espèce non citée</li>
+</ul>
+</li>
+</ul>
+<h4 id="chaleur-propri-t-resistance-chaleur">Chaleur - Propriété <code>resistance_chaleur</code></h4>
+<blockquote>
+<p><em>Description : Voire hyperthermophile : développement optimal en milieu chaud – plus de 30° <br>Mésothermophile : Les plantes ne subiront pas ou peu de dommages pendant des vagues de chaleur importantes<br>Résistante : La plante peut survivre à des vagues de chaleurs, si elles ne sont pas trop intenses, ou trop longues<br>Intolérante : La plante ne tolère pas les fortes chaleurs<br><br/>Ex : Thermophile</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Thermophile</li>
+<li>Mésothermophile</li>
+<li>Résistante</li>
+<li>Intolérante</li>
+</ul>
+</li>
+</ul>
+<h4 id="r-sistance-au-gel-propri-t-resistance-gel">Résistance au gel - Propriété <code>resistance_gel</code></h4>
+<blockquote>
+<p><em>Description : Résistance au gel faible/moy/forte<br>Faible : 0<br>Moyenne : - 5/-10<br>Forte : - 15<br>(trsè forte : -25 et +)<br/>Ex : Moyenne</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Faible</li>
+<li>Moyenne</li>
+<li>Forte</li>
+<li>Très forte</li>
+</ul>
+</li>
+</ul>
+<h4 id="s-cheresse-propri-t-resistance-secheresse">Sécheresse - Propriété <code>resistance_secheresse</code></h4>
+<blockquote>
+<p><em>Description : 1 – Xérophyte : Plante capable de vivre dans des régions habituellement sèches (déserts) ou dans des milieux physiologiquement secs (sols salés). Possède des adaptations morphologiques /physiologiques à la sécheresse. <br>2 – Mésoxérophyte : Se développe bien dans les millieux secs, mais ne supporte pas une sécheresse extrême. <br>3 - Peut résister à une sécheresse - si elle n’est pas trop longue ou <br> 4 – Mésophyte : Se développe le mieux dans des conditions d’humidité intermédiaire. Ne résiste pas très bien à la sécheresse. Elles peuvent avoir quelques adaptations à la sécheresse ou à la sur-humidité.  <br>5 – Hygrocline : Préfère un milieu assez humide. Ne supporte pas la sécheresse.<br/>Ex : Hygrocline</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Xérophyte</li>
+<li>Mésoxérophyte</li>
+<li>Résistant</li>
+<li>Mésophyte</li>
+<li>Hygrocline</li>
+</ul>
+</li>
+</ul>
+<h4 id="vents-propri-t-resistance-vent">Vents - Propriété <code>resistance_vent</code></h4>
+<blockquote>
+<p><em>Description : Les plantes adaptées au vent ont des branches solides, et un système racinaire développé qui leur permet de résister au chablis (déracinement).<br/>Ex : Intolérant</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Adapté</li>
+<li>Tolérant</li>
+<li>Intolérant</li>
+</ul>
+</li>
+</ul>
+<h4 id="salinit-propri-t-sol-salinite">Salinité - Propriété <code>sol_salinite</code></h4>
+<blockquote>
+<p><em>Description : 1 Euhalophyte : Ne pousse que dans des environnements salés – OU – haute tolérance au sel, avec un effet favorable du sel sur la plante (croissance et productivité) <br>2 : Tolère bien le sel– stratégies - excrétion, compartimentalisation, réduction de l’influx de sodium <br>3 : Tolérance plus faible au sel-  Ces plantes réussissent à minimiser le transport des ions de sodium vers les parties aériennes (3a - très tolérante, 3b assez tolérante)<br>4 : Intolérance au sel - Effet négatifs, (ralentissement de la croissance, voire mort) <br/>Ex : Halophyte facultative</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Euhalophyte</li>
+<li>Halophyte facultative</li>
+<li>Glycophyte tolérante</li>
+<li>Glycophyte intolérante</li>
+</ul>
+</li>
+</ul>
+<h4 id="besoins-de-texture-propri-t-sol-texture">Besoins de texture - Propriété <code>sol_texture</code></h4>
+<blockquote>
+<p><em>Description : Sableux : draine très bien, peu fertile, beaucoup d’érosion, chauffe rapidement<br>2 – Limoneux : fertile, retient moyennement l’eau, se compacte facilement, moins de 10% d’argile <br>3 – Argileux : fertile, retient bien l’eau, plus de 10% d’argile.<br>4 -Humifère : foncé – sol riche en matière organique – fertile – retient bien l’eau en étant pas trop compact - acide<br>♠Valeurs multiples possibles : Sable, Limon, Argile, Humus, Gravier/roches<br/>Ex : [‘Sable’, ‘Limon’]</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : liste</li>
+</ul>
+<h4 id="square-propri-t-square">Square - Propriété <code>square</code></h4>
+<blockquote>
+<p><em>Description : Jardin public de proximité, généralement clos en cœur de quartier offrant une ambiance rassurante et calme propice au séjour, à la détente et aux jeux.<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="stationnement-propri-t-stationnement">Stationnement - Propriété <code>stationnement</code></h4>
+<blockquote>
+<p><em>Description : Espaces spécifiquement aménagés pour le stationnement des véhicules en secteur urbain et péri urbain, sur des places ou le long des voies<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="structurer-propri-t-structure">Structurer - Propriété <code>structure</code></h4>
+<blockquote>
+<p><em>Description : Un alignement qui cadre un point de vue vers un monument mais aussi le port architecturé des<br>arbres, le dessin des branches charpentières… le végétal permet de souligner des limites, des lignes<br>directrices.<br><br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="symbolique-propri-t-symbolique">Symbolique - Propriété <code>symbolique</code></h4>
+<blockquote>
+<p><em>Description : le prestige et le rôle symbolique des plantations permet de jouer/de faire écho avec le patrimoine architectural. Le végétal peut également conforter une identité locale en lien avec l’histoire du lieu ou évoquer un lieu particulier ou sacré.<br><br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="toxicit-propri-t-toxique">Toxicité - Propriété <code>toxique</code></h4>
+<blockquote>
+<p><em>Description : Oui (majeure ou mineure)<br>Non<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+<h4 id="vitesse-de-croissance-propri-t-vitesse-croissance">Vitesse de croissance - Propriété <code>vitesse_croissance</code></h4>
+<blockquote>
+<p><em>Description : Critère qualitatif - fourchette pour vérifier : <br>1 : 60+cm ans<br>2 : 30/60, <br>3- : de 30 par an. <br>Catégories intermédiaires si incertitude -  moyenne/rapide, lente/moyenne<br/>Ex : Moyenne</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : chaîne de caractères</li>
+<li>Valeurs autorisées :
+<ul>
+<li>Rapide</li>
+<li>Moyenne</li>
+<li>Lente</li>
+</ul>
+</li>
+</ul>
+<h4 id="voie-p-riph-rique-propri-t-voie-peripherique">Voie périphérique - Propriété <code>voie_peripherique</code></h4>
+<blockquote>
+<p><em>Description : Espace public linéaire assurant le lien entre la ville centre et sa périphérie. Il est une transition entre des secteurs urbanisés et péri-urbanisés voire des espaces ruraux. Il constitue une entrée de ville et/ou dessert des zones d’ha-bitation et d’activités économiques. Exemples: bas-côtés et dépendances routières de ZAC, etc.<br/>Ex : None</em></p>
+</blockquote>
+<ul>
+<li>Valeur optionnelle</li>
+<li>Type : booléen</li>
+</ul>
+</div>
+<div class="include-after">
+</div>
+</body>
+</html>
